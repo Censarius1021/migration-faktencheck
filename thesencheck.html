@@ -382,7 +382,20 @@ footer .wrap a{color:var(--yellow)}
     </div>
     <p class="src">Bereinigt sinkt das Vielfache von ~5,6× auf ~4,4× — bleibt aber klar erhöht. „Mit": <a href="https://www.bundestag.de/presse/hib/kurzmeldungen-1098772" target="_blank" rel="noopener">hib (PKS 2024)</a>; „ohne": <a href="https://www.berliner-zeitung.de/article/neue-zahlen-zur-kriminalitaetsbelastung-syrer-in-deutschland-erheblich-gewalttaetiger-als-bundesbuerger-10030200" target="_blank" rel="noopener">Bundestags-Antwort / Berliner Zeitung (PKS 2025)</a>; Gewalt-TVBZ (~10×): <a href="https://dserver.bundestag.de/btd/21/001/2100145.pdf" target="_blank" rel="noopener">Bundestag-Drs. 21/145</a>.</p>
   </div>
-  <div class="fazit"><strong>Fazit:</strong> Hier hat die Beobachtung einen <strong>echten Kern</strong>: Syrer/Afghanen/Iraker sind real überrepräsentiert, auch bereinigt (~4,4×). Falsch ist die <strong>Ursachen­erzählung</strong> („Herkunft") — Treiber sind Status, Jung-Männer-Struktur und Norm. Liberale Konsequenz: nicht leugnen, sondern richtig erklären und gezielt handeln.</div>
+  <p class="q" style="margin-top:6px"><strong>Milieu-Vergleich — gleiche Sozialstruktur, gleiches Muster:</strong> Syrer, Afghanen und Iraker sind ein stark <strong>junges, männliches und prekäres</strong> Milieu: Männeranteil der Zuwanderung 58–73 % (Deutsche ~50 %), Bürgergeld-Quote z. B. bei Syrern 54,9 % (Deutsche ~5 %), unsicherer Aufenthalt, beengte Sammelunterkünfte. Junge Männer sind aber in <em>jeder</em> Bevölkerung die mit Abstand tatgeneigteste Gruppe — auch bei Deutschen.</p>
+  <div class="two-col">
+    <div class="chart-wrap">
+      <p class="chart-title">Das Milieu: Männeranteil der Asyl-Zuwanderung 2024 (%)</p>
+      <div class="chart-box" style="height:240px"><canvas id="c66"></canvas></div>
+      <p class="src">Dazu hohe Prekarität: SGB-II-/Bürgergeld-Quote Syrer 54,9 % vs. Deutsche ~5 %. Quellen: <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Statistik/BundesamtinZahlen/bundesamt-in-zahlen-2024.pdf" target="_blank" rel="noopener">BAMF, Bundesamt in Zahlen 2024</a>; <a href="https://statistik.arbeitsagentur.de/DE/Statischer-Content/Statistiken/Themen-im-Fokus/Migration/Generische-Publikationen/AMkompakt-Arbeitsmarktsituation-von-syrischen-Staatsangehoerigen.pdf" target="_blank" rel="noopener">BA (Syrer)</a>.</p>
+    </div>
+    <div class="chart-wrap">
+      <p class="chart-title">Gleicher Treiber bei Deutschen: TVBZ Gewalt nach Alter/Geschlecht (nur Deutsche, 2024)</p>
+      <div class="chart-box" style="height:240px"><canvas id="c67"></canvas></div>
+      <p class="src">Junge deutsche Männer (14–18) sind ~6× höher belastet als deutsche Männer ab 21 und ~25× über deutschen Frauen — ganz ohne Migration. Quelle: <a href="https://dserver.bundestag.de/btd/21/001/2100145.pdf" target="_blank" rel="noopener">Bundestag-Drs. 21/145 (BKA-PKS 2024)</a>.</p>
+    </div>
+  </div>
+  <div class="fazit"><strong>Fazit:</strong> Hier hat die Beobachtung einen <strong>echten Kern</strong>: Syrer/Afghanen/Iraker sind real überrepräsentiert, auch bereinigt (~4,4×). Falsch ist die <strong>Ursachen­erzählung</strong> („Herkunft"): Vergleicht man <strong>gleiche Sozialstruktur</strong>, schrumpft der Unterschied schon durch Alter und Geschlecht stark — und löst sich bei Kontrolle der sozialen Lage (Bildung, Gewaltsozialisation, Aufenthaltssicherheit) <strong>weitgehend auf</strong>; bei gleichem Profil fanden Baier/Pfeiffer „keine Unterschiede mehr" in der Gewaltrate. Zusätzlich verzerrt häufigeres Anzeigeverhalten gegen Fremde (Gewalt: 19,5 % vs. 29,3 %). Liberale Konsequenz: nicht leugnen, sondern an Status, Perspektive und Milieu ansetzen — siehe <a href="#warum">„Warum erhöht?"</a>.</div>
 </section>
 
 <!-- WARUM MULTIKAUSAL -->
@@ -1827,6 +1840,16 @@ new Chart(c64,{type:'bar',data:{labels:d64.map(d=>d[0]),datasets:[{data:d64.map(
 const d65=[['Zypern',7.2],['Griechenland',6.6],['Irland',3.4],['Spanien',3.4],['Luxemburg',3.2],['Deutschland',2.7],['EU+ Schnitt',2.0]];
 new Chart(c65,{type:'bar',data:{labels:d65.map(d=>d[0]),datasets:[{data:d65.map(d=>d[1]),backgroundColor:d65.map(d=>d[0]==='Deutschland'?C.primary:(d[0]==='EU+ Schnitt'?C.ref:C.secondary)),borderRadius:5,barThickness:20}]},
   options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'end',color:C.text,font:{weight:700,size:10,family:"'Fira Code'"},formatter:v=>v.toLocaleString('de-DE')},tooltip:{callbacks:{label:c=>c.raw+' Erstanträge je 1.000 Einw. (2024)'}}},scales:{x:{grid:{color:C.grid},suggestedMax:8,ticks:{callback:v=>v}},y:{grid:{display:false}}}}});
+
+/* C66 — Milieu: Männeranteil der Asyl-Zuwanderung */
+const d66=[['Syrien',72.5],['Afghanistan',69.5],['Irak',58.1],['Deutsche\n(Bevölkerung)',50]];
+new Chart(c66,{type:'bar',data:{labels:d66.map(d=>d[0]),datasets:[{data:d66.map(d=>d[1]),backgroundColor:d66.map(d=>d[0].startsWith('Deutsche')?C.secondary:C.warn),borderRadius:5,maxBarThickness:64}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,size:12,family:"'Fira Code'"},formatter:v=>v.toLocaleString('de-DE')+' %'},tooltip:{callbacks:{label:c=>c.raw+' % Männeranteil'}}},scales:{y:{grid:{color:C.grid},suggestedMax:80,ticks:{callback:v=>v+' %'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
+
+/* C67 — derselbe Treiber bei Deutschen: TVBZ Gewalt nach Alter/Geschlecht */
+const d67=[['Männer\n14–18',1148],['Männer\n18–21',979],['Männer\nab 21',199],['Frauen\nab 21',45]];
+new Chart(c67,{type:'bar',data:{labels:d67.map(d=>d[0]),datasets:[{data:d67.map(d=>d[1]),backgroundColor:d67.map(d=>d[1]>=900?C.danger:(d[1]>=199?C.warn:C.ref)),borderRadius:5,maxBarThickness:64}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,size:11,family:"'Fira Code'"},formatter:v=>fmt(v)},tooltip:{callbacks:{label:c=>'TVBZ Gewalt '+fmt(c.raw)+' (nur Deutsche)'}}},scales:{y:{grid:{color:C.grid},suggestedMax:1300,ticks:{callback:v=>fmt(v)}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
 </script>
 </body>
 </html>
