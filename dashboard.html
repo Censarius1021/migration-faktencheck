@@ -11,8 +11,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
 :root{
-  --primary:#1E40AF; --secondary:#3B82F6; --accent:#D97706;
-  --bg:#F8FAFC; --fg:#0f1f4d; --muted:#E9EEF6; --border:#DBEAFE;
+  --primary:#15244B; --secondary:#3B82F6; --accent:#D97706; --yellow:#FFE500;
+  --bg:#F8FAFC; --fg:#15244B; --muted:#E9EEF6; --border:#DBEAFE;
   --danger:#DC2626; --good:#0F766E; --good-soft:#14B8A6; --warn:#D97706; --ref:#64748B;
   --card:#FFFFFF;
 }
@@ -23,18 +23,21 @@ body{
   font-family:'Fira Sans',system-ui,sans-serif; line-height:1.55;
 }
 header{
-  background:linear-gradient(135deg,#15235e,#1E40AF); color:#fff;
-  padding:40px 24px 32px;
+  background:var(--primary); color:#fff;
+  padding:46px 24px 44px; position:relative; overflow:hidden;
 }
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-header h1{font-family:'Fira Code',monospace;font-size:clamp(1.5rem,3.5vw,2.3rem);margin:0 0 8px;font-weight:700;letter-spacing:-.5px}
+header .kicker{font-family:'Fira Code',monospace;font-weight:700;letter-spacing:4px;font-size:.78rem;color:var(--yellow);margin-bottom:14px}
+header .bar{position:absolute;bottom:0;left:0;width:100%;height:14px;display:flex}
+header .bar i{flex:1}header .bar .y{background:var(--yellow)}header .bar .b{background:#0e1834}
+header h1{font-family:'Fira Sans',sans-serif;font-size:clamp(2rem,5vw,3.4rem);margin:0 0 10px;font-weight:900;letter-spacing:-1.5px;line-height:1.02}
 header p{margin:0;max-width:760px;color:#cfe0ff;font-size:1.02rem}
 header .meta{margin-top:14px;font-size:.82rem;color:#9db8ef;font-family:'Fira Code',monospace}
 .navbtn{display:inline-block;margin-top:16px;background:#fff;color:var(--primary);font-weight:600;font-family:'Fira Code',monospace;font-size:.85rem;padding:10px 18px;border-radius:8px;text-decoration:none;border:1px solid #cfe0ff;transition:background .15s}
 .navbtn:hover{background:#eef4ff}
 .principle{
   margin-top:20px;padding:14px 18px;background:rgba(255,255,255,.10);
-  border-left:4px solid var(--accent);border-radius:6px;font-size:.95rem;color:#eef4ff;max-width:820px
+  border-left:5px solid var(--yellow);border-radius:6px;font-size:.95rem;color:#eef4ff;max-width:820px
 }
 section{padding:36px 0 8px}
 .section-title{font-family:'Fira Code',monospace;font-size:1.05rem;font-weight:700;color:var(--primary);
@@ -63,8 +66,10 @@ table.dirty td.side{white-space:nowrap;font-weight:600}
 .side.r{color:var(--danger)} .side.l{color:var(--secondary)}
 .tag{display:inline-block;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:20px;font-family:'Fira Code',monospace}
 .tag.r{background:#fde8e8;color:#b91c1c} .tag.l{background:#e0ecff;color:#1d4ed8}
-footer{padding:30px 0 50px;color:#64748b;font-size:.8rem}
-footer .wrap{border-top:1px solid var(--border);padding-top:18px}
+footer{background:var(--primary);color:#aebbd6;padding:34px 0 48px;font-size:.82rem}
+footer .wrap{padding-top:4px}
+footer .wm{font-weight:800;color:#fff;font-size:1.05rem;margin-bottom:10px}
+footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margin-top:5px;border-radius:2px}
 .disc{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:14px 18px;font-size:.85rem;color:#78350f;margin-top:18px}
 .warnbox{grid-column:1/-1;background:#fef2f2;border:1px solid #fecaca;border-left:5px solid var(--danger);border-radius:10px;padding:16px 20px;font-size:.9rem;color:#7f1d1d}
 .warnbox h4{margin:0 0 8px;font-size:1rem;font-family:'Fira Code',monospace;color:#b91c1c}
@@ -87,13 +92,15 @@ footer .wrap{border-top:1px solid var(--border);padding-top:18px}
 <body>
 <header>
   <div class="wrap">
-    <h1>Migration &amp; Zusammenleben — Daten im Überblick</h1>
+    <div class="kicker">DATEN IM ÜBERBLICK</div>
+    <h1>Migration &amp; <span style="color:var(--yellow)">Zusammenleben</span></h1>
     <p>Die zentralen Befunde zu Kriminalität, Integration, Sprache und Zusammenhalt — faktenbelegt, gegen Dramatisierung wie Verharmlosung.</p>
     <div class="meta">Stand: Juni 2026 · Quellen: BKA/BMI (PKS 2024/25), BAMF, IAB, BA, SVR, RIAS, Mediendienst Integration · PKS = Hellfeld (Tatverdächtige ≠ Verurteilte)</div>
     <div class="principle"><strong>Leitprinzip:</strong> Probleme exakt benennen — ohne Gruppen pauschal zu verdächtigen. Nicht „Herkunft" erklärt Kriminalität, sondern Konstellationen: junger Mann + fehlende Perspektive + bestimmte Milieus.</div>
     <a class="navbtn" href="thesencheck.html">→ Thesen-Check im Detail (Thesen, je Grafik &amp; Faktencheck)</a>
     <a class="navbtn" href="weltkarten.html">→ Migration in Weltkarten</a>
   </div>
+  <div class="bar"><i class="y"></i><i class="b"></i></div>
 </header>
 
 <div class="wrap">
@@ -416,13 +423,14 @@ footer .wrap{border-top:1px solid var(--border);padding-top:18px}
 </div>
 
 <footer><div class="wrap">
+  <div class="wm">Freie Demokraten<span class="u"></span></div>
   Argumente-Werkstatt · Thema „zusammenleben-migration" · Visualisierung v1 ·
   Erstellt mit Chart.js · Farben/Typo nach ui-ux-pro-max (Data-Dense Dashboard, WCAG AA).
 </div></footer>
 
 <script>
 Chart.register(ChartDataLabels);
-const C={primary:'#1E40AF',secondary:'#3B82F6',accent:'#D97706',good:'#0F766E',goodSoft:'#14B8A6',warn:'#D97706',danger:'#DC2626',ref:'#64748B',grid:'#E2E8F0',text:'#334155'};
+const C={primary:'#15244B',secondary:'#3B82F6',accent:'#D97706',good:'#0F766E',goodSoft:'#14B8A6',warn:'#D97706',danger:'#DC2626',ref:'#64748B',grid:'#E2E8F0',text:'#334155'};
 Chart.defaults.font.family="'Fira Sans',sans-serif";
 Chart.defaults.color=C.text;
 Chart.defaults.plugins.legend.display=false;
