@@ -390,12 +390,12 @@ footer .wrap a{color:var(--yellow)}
       <p class="src">Dazu hohe Prekarität: SGB-II-/Bürgergeld-Quote Syrer 54,9 % vs. Deutsche ~5 %. Quellen: <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Statistik/BundesamtinZahlen/bundesamt-in-zahlen-2024.pdf" target="_blank" rel="noopener">BAMF, Bundesamt in Zahlen 2024</a>; <a href="https://statistik.arbeitsagentur.de/DE/Statischer-Content/Statistiken/Themen-im-Fokus/Migration/Generische-Publikationen/AMkompakt-Arbeitsmarktsituation-von-syrischen-Staatsangehoerigen.pdf" target="_blank" rel="noopener">BA (Syrer)</a>.</p>
     </div>
     <div class="chart-wrap">
-      <p class="chart-title">Gleicher Treiber bei Deutschen: TVBZ Gewalt nach Alter/Geschlecht (nur Deutsche, 2024)</p>
+      <p class="chart-title">TVBZ Gewalt nach Alter/Geschlecht — Gruppenvergleich (2024)</p>
       <div class="chart-box" style="height:240px"><canvas id="c67"></canvas></div>
-      <p class="src">Junge deutsche Männer (14–18) sind ~6× höher belastet als deutsche Männer ab 21 und ~25× über deutschen Frauen — ganz ohne Migration. Quelle: <a href="https://dserver.bundestag.de/btd/21/001/2100145.pdf" target="_blank" rel="noopener">Bundestag-Drs. 21/145 (BKA-PKS 2024)</a>.</p>
+      <p class="src">In <em>derselben</em> Alters-/Geschlechtsgruppe schrumpft der Abstand: Bei jungen Männern (14–18) liegt der Faktor bei ~5–7× statt der ~10–11× im Pauschalvergleich — aber er bleibt deutlich. Alter/Geschlecht erklären also einen <strong>Teil</strong>, nicht alles. (Auch deutsche junge Männer sind ~6–25× höher belastet als deutsche Erwachsene/Frauen.) Quelle: <a href="https://dserver.bundestag.de/btd/21/001/2100145.pdf" target="_blank" rel="noopener">BT-Drs. 21/145 (BKA-PKS 2024, Gewaltkriminalität)</a>. Nenner-Vorbehalt bei kleinen Gruppen beachten.</p>
     </div>
   </div>
-  <div class="fazit"><strong>Fazit:</strong> Hier hat die Beobachtung einen <strong>echten Kern</strong>: Syrer/Afghanen/Iraker sind real überrepräsentiert, auch bereinigt (~4,4×). Falsch ist die <strong>Ursachen­erzählung</strong> („Herkunft"): Vergleicht man <strong>gleiche Sozialstruktur</strong>, schrumpft der Unterschied schon durch Alter und Geschlecht stark — und löst sich bei Kontrolle der sozialen Lage (Bildung, Gewaltsozialisation, Aufenthaltssicherheit) <strong>weitgehend auf</strong>; bei gleichem Profil fanden Baier/Pfeiffer „keine Unterschiede mehr" in der Gewaltrate. Zusätzlich verzerrt häufigeres Anzeigeverhalten gegen Fremde (Gewalt: 19,5 % vs. 29,3 %). Liberale Konsequenz: nicht leugnen, sondern an Status, Perspektive und Milieu ansetzen — siehe <a href="#warum">„Warum erhöht?"</a>.</div>
+  <div class="fazit"><strong>Fazit:</strong> Hier hat die Beobachtung einen <strong>echten Kern</strong>: Syrer/Afghanen/Iraker sind real überrepräsentiert, auch bereinigt (~4,4×). Falsch ist die <strong>Ursachen­erzählung</strong> („Herkunft"): Normiert man auf <strong>gleiche Alters-/Geschlechtsgruppe</strong>, sinkt der Faktor von ~10× auf <strong>~5–7×</strong> (junge Männer) — Alter/Geschlecht erklären einen Teil, aber nicht alles. Den Rest tragen <strong>soziale Lage, Status und Normen</strong>: im Dunkelfeld, bei gleichem Bildungs- und Gewaltsozialisations-Profil, fanden Baier/Pfeiffer „keine Unterschiede mehr" in der Gewaltrate. Zusätzlich verzerrt häufigeres Anzeigeverhalten gegen Fremde (Gewalt: 19,5 % vs. 29,3 %). Liberale Konsequenz: nicht leugnen, sondern an Status, Perspektive und Milieu ansetzen — siehe <a href="#warum">„Warum erhöht?"</a>.</div>
 </section>
 
 <!-- WARUM MULTIKAUSAL -->
@@ -1846,10 +1846,13 @@ const d66=[['Syrien',72.5],['Afghanistan',69.5],['Irak',58.1],['Deutsche\n(Bevö
 new Chart(c66,{type:'bar',data:{labels:d66.map(d=>d[0]),datasets:[{data:d66.map(d=>d[1]),backgroundColor:d66.map(d=>d[0].startsWith('Deutsche')?C.secondary:C.warn),borderRadius:5,maxBarThickness:64}]},
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,size:12,family:"'Fira Code'"},formatter:v=>v.toLocaleString('de-DE')+' %'},tooltip:{callbacks:{label:c=>c.raw+' % Männeranteil'}}},scales:{y:{grid:{color:C.grid},suggestedMax:80,ticks:{callback:v=>v+' %'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
 
-/* C67 — derselbe Treiber bei Deutschen: TVBZ Gewalt nach Alter/Geschlecht */
-const d67=[['Männer\n14–18',1148],['Männer\n18–21',979],['Männer\nab 21',199],['Frauen\nab 21',45]];
-new Chart(c67,{type:'bar',data:{labels:d67.map(d=>d[0]),datasets:[{data:d67.map(d=>d[1]),backgroundColor:d67.map(d=>d[1]>=900?C.danger:(d[1]>=199?C.warn:C.ref)),borderRadius:5,maxBarThickness:64}]},
-  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,size:11,family:"'Fira Code'"},formatter:v=>fmt(v)},tooltip:{callbacks:{label:c=>'TVBZ Gewalt '+fmt(c.raw)+' (nur Deutsche)'}}},scales:{y:{grid:{color:C.grid},suggestedMax:1300,ticks:{callback:v=>fmt(v)}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
+/* C67 — TVBZ Gewalt nach Alter/Geschlecht: Gruppenvergleich Deutsche/Syrer/Iraker/Afghanen (BT-Drs. 21/145, PKS 2024) */
+new Chart(c67,{type:'bar',data:{labels:['Männer\n14–18','Männer\n18–21','Männer\nab 21','Frauen\nab 21'],datasets:[
+  {label:'Deutsche',data:[1148,979,199,45],backgroundColor:C.ref,borderRadius:3,maxBarThickness:24},
+  {label:'Syrer',data:[8044,5209,1777,214],backgroundColor:C.danger,borderRadius:3,maxBarThickness:24},
+  {label:'Iraker',data:[6720,4927,1956,299],backgroundColor:C.warn,borderRadius:3,maxBarThickness:24},
+  {label:'Afghanen',data:[5748,3972,1885,302],backgroundColor:'#9333ea',borderRadius:3,maxBarThickness:24}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:12,font:{size:11}}},datalabels:{display:false},tooltip:{callbacks:{label:c=>c.dataset.label+': TVBZ '+fmt(c.raw)}}},scales:{y:{grid:{color:C.grid},suggestedMax:8500,ticks:{callback:v=>fmt(v)}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
 </script>
 </body>
 </html>
