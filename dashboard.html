@@ -87,6 +87,14 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 .check strong{color:var(--primary)}
 @media (max-width:680px){.these-row{grid-template-columns:1fr}.these-row .these{border-left:none;border-top:5px solid var(--danger)}}
 @media (max-width:600px){.chart-box{height:330px}}
+.racectl{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 16px}
+.rtoggle{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.rbtn{background:#fff;border:none;font-family:'Fira Code',monospace;font-weight:600;font-size:.82rem;padding:9px 15px;cursor:pointer;color:var(--primary)}
+.rbtn.active{background:var(--primary);color:#fff}
+.rplaybtn{background:var(--yellow);color:var(--primary);border:none;font-family:'Fira Code',monospace;font-weight:700;font-size:.85rem;padding:9px 16px;border-radius:8px;cursor:pointer;white-space:nowrap}
+.rplaybtn:hover{filter:brightness(.95)}
+#ryr{flex:1;min-width:160px;accent-color:var(--primary);cursor:pointer}
+.rylab{font-family:'Fira Code',monospace;font-weight:700;font-size:1.4rem;color:var(--primary);min-width:72px;text-align:center}
 </style>
 </head>
 <body>
@@ -417,7 +425,23 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 
   </div>
 
-  <div class="disc"><strong>Die liberale Pointe:</strong> Jede „Schuld-auf-Gruppen"-These scheitert nicht am Fakt (Überrepräsentation ist real), sondern an der Kausalität. Wer die Zahlen ernst nimmt, landet bei <strong>Status, Bleibeperspektive, Alter/Geschlecht, sozialer Lage</strong> — also bei veränderbaren Ursachen. Belege: <a href="#" onclick="return false" style="color:#92722b">argument-labor/workflows/04-gegenargumente/rechte-deutungen-thesencheck.md</a></div>
+  <div class="disc"><strong>Die liberale Pointe:</strong> Jede „Schuld-auf-Gruppen"-These scheitert nicht am Fakt (Überrepräsentation ist real), sondern an der Kausalität. Wer die Zahlen ernst nimmt, landet bei <strong>Status, Bleibeperspektive, Alter/Geschlecht, sozialer Lage</strong> — also bei veränderbaren Ursachen. Belege: <a href="thesencheck.html">Thesen-Check (alle Quellen verlinkt)</a></div>
+</section>
+
+<section id="race-sec">
+  <h2>Herkunftsländer im Zeitverlauf (2008–2024)</h2>
+  <p class="lead">Top-12-Herkunftsländer je Jahr — wähle ein Jahr oder starte die Animation. Gut sichtbar: der Asyl-Peak 2015/16 (Syrien) und der Wandel der Arbeitsmigration (zuletzt Indien an der Spitze).</p>
+  <div class="racectl">
+    <div class="rtoggle">
+      <button class="rbtn active" data-metric="asyl">Asyl-Erstanträge</button>
+      <button class="rbtn" data-metric="arbeit">Arbeitsmigration</button>
+    </div>
+    <button id="rplay" class="rplaybtn">▶ Abspielen</button>
+    <input type="range" id="ryr" min="2008" max="2024" step="1" value="2024" aria-label="Jahr wählen">
+    <span id="rylab" class="rylab">2024</span>
+  </div>
+  <div class="chart-box" style="height:470px"><canvas id="cRace"></canvas></div>
+  <p class="src">Top-12 Herkunftsländer je Jahr (geo=DE). Quellen: Eurostat — Asyl-Erstanträge: <a href="https://ec.europa.eu/eurostat/databrowser/view/migr_asyappctza/default/table?lang=en" target="_blank" rel="noopener">migr_asyappctza</a>; Erwerbstitel: <a href="https://ec.europa.eu/eurostat/databrowser/view/migr_resfirst/default/table?lang=en" target="_blank" rel="noopener">migr_resfirst</a>. Asyl-Werte 5er-gerundet.</p>
 </section>
 
 </div>
@@ -618,6 +642,33 @@ new Chart(cAlter,{type:'bar',data:{labels:['alle Altersgr.\n(Ø ≈)','Jugendlic
     plugins:{datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,size:10,family:"'Fira Code'"},formatter:v=>fmt(v)},
       tooltip:{callbacks:{label:c=>'TVBZ '+fmt(c.raw)+' / 100.000'}}},
     scales:{y:{grid:{color:C.grid},suggestedMax:7800,ticks:{callback:v=>fmt(v)}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
+
+/* Bar-Race: Herkunftsländer im Zeitverlauf */
+const RACE={"asyl": {"2008": [["Irak", 6695], ["Serbien", 1510], ["Türkei", 1320], ["Vietnam", 1040], ["Iran", 805], ["Russland", 770], ["Syrien", 745], ["Afghanistan", 650], ["Libanon", 515], ["Nigeria", 500], ["Indien", 480], ["Sri Lanka", 460]], "2009": [["Irak", 6540], ["Afghanistan", 3375], ["Türkei", 1430], ["Kosovo", 1400], ["Iran", 1170], ["Vietnam", 1115], ["Russland", 935], ["Syrien", 820], ["Nigeria", 790], ["Indien", 680], ["Aserbaidschan", 650], ["Serbien", 580]], "2010": [["Afghanistan", 5905], ["Irak", 5555], ["Serbien", 4980], ["Iran", 2475], ["Nordmazedonien", 2465], ["Somalia", 2235], ["Kosovo", 1615], ["Syrien", 1490], ["Türkei", 1340], ["Russland", 1200], ["Vietnam", 1010], ["Pakistan", 840]], "2011": [["Afghanistan", 7765], ["Irak", 5830], ["Serbien", 4580], ["Iran", 3350], ["Syrien", 2635], ["Pakistan", 2540], ["Russland", 1690], ["Türkei", 1580], ["Kosovo", 1395], ["Nordmazedonien", 1130], ["Somalia", 985], ["Indien", 820]], "2012": [["Serbien", 8475], ["Afghanistan", 7500], ["Syrien", 6200], ["Irak", 5350], ["Nordmazedonien", 4545], ["Iran", 4350], ["Pakistan", 3410], ["Russland", 3200], ["Bosnien-Herz.", 2025], ["Kosovo", 1905], ["Türkei", 1455], ["Georgien", 1300]], "2013": [["Russland", 14885], ["Syrien", 11850], ["Serbien", 11460], ["Afghanistan", 7735], ["Nordmazedonien", 6210], ["Iran", 4425], ["Pakistan", 4100], ["Irak", 3960], ["Somalia", 3785], ["Eritrea", 3615], ["Kosovo", 3395], ["Bosnien-Herz.", 3325]], "2014": [["Syrien", 39330], ["Serbien", 17170], ["Eritrea", 13200], ["Afghanistan", 9115], ["Albanien", 7865], ["Kosovo", 6910], ["Bosnien-Herz.", 5705], ["Nordmazedonien", 5615], ["Somalia", 5530], ["Irak", 5345], ["Russland", 4410], ["Pakistan", 3970]], "2015": [["Syrien", 158655], ["Albanien", 53805], ["Kosovo", 33425], ["Afghanistan", 31380], ["Irak", 29785], ["Serbien", 16700], ["Eritrea", 10875], ["Nordmazedonien", 9085], ["Pakistan", 8200], ["Iran", 5395], ["Russland", 5255], ["Nigeria", 5205]], "2016": [["Syrien", 266250], ["Afghanistan", 127010], ["Irak", 96115], ["Iran", 26425], ["Eritrea", 18855], ["Albanien", 14855], ["Pakistan", 14485], ["Nigeria", 12710], ["Russland", 10985], ["Somalia", 9850], ["Serbien", 6400], ["Gambia", 5655]], "2017": [["Syrien", 48970], ["Irak", 21930], ["Afghanistan", 16425], ["Eritrea", 10225], ["Iran", 8610], ["Türkei", 8025], ["Nigeria", 7810], ["Somalia", 6835], ["Russland", 4885], ["Guinea", 3955], ["Albanien", 3775], ["Pakistan", 3670]], "2018": [["Syrien", 44165], ["Irak", 16330], ["Iran", 10855], ["Nigeria", 10170], ["Türkei", 10160], ["Afghanistan", 9945], ["Eritrea", 5570], ["Somalia", 5075], ["Russland", 3940], ["Georgien", 3765], ["Guinea", 2870], ["Pakistan", 2210]], "2019": [["Syrien", 39270], ["Irak", 13740], ["Türkei", 10785], ["Afghanistan", 9520], ["Nigeria", 9070], ["Iran", 8405], ["Somalia", 3570], ["Eritrea", 3520], ["Georgien", 3330], ["Russland", 3145], ["Guinea", 2420], ["Pakistan", 2175]], "2020": [["Syrien", 36435], ["Afghanistan", 9900], ["Irak", 9845], ["Türkei", 5780], ["Nigeria", 3305], ["Iran", 3120], ["Somalia", 2605], ["Eritrea", 2560], ["Georgien", 2050], ["Russland", 1700], ["Moldau", 1285], ["Guinea", 1270]], "2021": [["Syrien", 54905], ["Afghanistan", 23275], ["Irak", 15605], ["Türkei", 7065], ["Georgien", 3685], ["Somalia", 3650], ["Eritrea", 3170], ["Iran", 2695], ["Nigeria", 2510], ["Moldau", 2390], ["Nordmazedonien", 2330], ["Algerien", 1520]], "2022": [["Syrien", 70975], ["Afghanistan", 36360], ["Türkei", 23940], ["Irak", 15175], ["Georgien", 7965], ["Iran", 6320], ["Somalia", 3940], ["Eritrea", 3925], ["Russland", 2850], ["Nordmazedonien", 2755], ["Moldau", 2590], ["Nigeria", 2365]], "2023": [["Syrien", 102930], ["Türkei", 61180], ["Afghanistan", 51275], ["Irak", 11150], ["Iran", 9385], ["Georgien", 8415], ["Russland", 7665], ["Somalia", 5300], ["Eritrea", 4115], ["Venezuela", 3730], ["Guinea", 3300], ["Kolumbien", 3280]], "2024": [["Syrien", 76765], ["Afghanistan", 34150], ["Türkei", 29175], ["Irak", 7840], ["Somalia", 6955], ["Iran", 5230], ["Russland", 4700], ["Kolumbien", 3840], ["Eritrea", 3130], ["Guinea", 3050], ["Venezuela", 3005], ["Georgien", 2635]]}, "arbeit": {"2008": [["Indien", 2716], ["USA", 2666], ["China", 1933], ["Japan", 1355], ["Russland", 1336], ["Ukraine", 976], ["Türkei", 921], ["Croatia", 775], ["Brasilien", 671], ["Serbien", 532], ["Südkorea", 395], ["Philippinen", 361]], "2009": [["USA", 2262], ["Indien", 2148], ["China", 1655], ["Japan", 1104], ["Russland", 1075], ["Ukraine", 929], ["Türkei", 674], ["Croatia", 538], ["Brasilien", 457], ["Serbien", 401], ["Georgien", 368], ["Kenia", 338]], "2010": [["USA", 2277], ["Indien", 1957], ["China", 1872], ["Japan", 1229], ["Russland", 1054], ["Ukraine", 880], ["Türkei", 515], ["Serbien", 495], ["Croatia", 456], ["Brasilien", 375], ["Georgien", 370], ["Kenia", 360]], "2011": [["Indien", 2645], ["USA", 2605], ["China", 2005], ["Japan", 1350], ["Russland", 999], ["Ukraine", 904], ["Croatia", 695], ["Brasilien", 570], ["Türkei", 524], ["Serbien", 508], ["Bosnien-Herz.", 451], ["Südkorea", 447]], "2012": [["Indien", 3567], ["USA", 3272], ["China", 2886], ["Croatia", 1757], ["Bosnien-Herz.", 1371], ["Japan", 1360], ["Russland", 1347], ["Ukraine", 1180], ["Serbien", 1127], ["Türkei", 1027], ["Südkorea", 566], ["Brasilien", 554]], "2013": [["USA", 3767], ["Indien", 3530], ["China", 2761], ["Bosnien-Herz.", 1469], ["Japan", 1411], ["Russland", 1404], ["Ukraine", 1125], ["Serbien", 1118], ["Türkei", 1024], ["Croatia", 940], ["Südkorea", 610], ["Brasilien", 536]], "2014": [["Indien", 3970], ["USA", 3738], ["China", 2973], ["Bosnien-Herz.", 1944], ["Japan", 1524], ["Serbien", 1489], ["Ukraine", 1460], ["Russland", 1227], ["Türkei", 1132], ["Mexiko", 767], ["Südkorea", 646], ["Brasilien", 560]], "2015": [["Indien", 1933], ["USA", 1607], ["China", 1191], ["Bosnien-Herz.", 1062], ["Serbien", 815], ["Japan", 717], ["Russland", 656], ["Türkei", 555], ["Ukraine", 552], ["Südkorea", 378], ["Brasilien", 283], ["Mexiko", 228]], "2016": [["Indien", 4491], ["Bosnien-Herz.", 4414], ["USA", 4019], ["China", 2874], ["Serbien", 2553], ["Kosovo", 1779], ["Japan", 1757], ["Russland", 1362], ["Ukraine", 1332], ["Türkei", 1283], ["Nordmazedonien", 1240], ["Südkorea", 869]], "2017": [["Bosnien-Herz.", 6193], ["Indien", 5422], ["Kosovo", 4832], ["Serbien", 4782], ["USA", 4127], ["China", 3107], ["Nordmazedonien", 2379], ["Türkei", 1805], ["Albanien", 1796], ["Japan", 1696], ["Russland", 1484], ["Ukraine", 1290]], "2018": [["Indien", 7655], ["Bosnien-Herz.", 6335], ["Serbien", 5603], ["Kosovo", 5333], ["USA", 4872], ["Nordmazedonien", 4456], ["Albanien", 3549], ["China", 3128], ["Türkei", 2427], ["Japan", 2285], ["Russland", 2048], ["Brasilien", 1682]], "2019": [["Indien", 8283], ["Bosnien-Herz.", 6833], ["Serbien", 5313], ["Kosovo", 5176], ["USA", 4680], ["Nordmazedonien", 4301], ["Albanien", 4297], ["Türkei", 3255], ["China", 3232], ["Japan", 2281], ["Russland", 2163], ["Brasilien", 1608]], "2020": [["Bosnien-Herz.", 5058], ["Indien", 5027], ["Serbien", 3756], ["Kosovo", 3012], ["USA", 2920], ["Nordmazedonien", 2796], ["Albanien", 2564], ["China", 2508], ["Türkei", 2376], ["Russland", 1566], ["Philippinen", 1310], ["Ukraine", 1296]], "2021": [["Indien", 7161], ["USA", 4013], ["Türkei", 3633], ["China", 3575], ["Serbien", 3344], ["Bosnien-Herz.", 3076], ["Russland", 2205], ["Albanien", 2172], ["Kosovo", 2150], ["Philippinen", 1943], ["Japan", 1580], ["Ukraine", 1549]], "2022": [["Indien", 12902], ["Kosovo", 6784], ["Bosnien-Herz.", 6172], ["Türkei", 5771], ["Serbien", 5611], ["Albanien", 5003], ["Russland", 4851], ["Nordmazedonien", 4330], ["USA", 4036], ["China", 3835], ["Iran", 2513], ["Philippinen", 2416]], "2023": [["Indien", 12289], ["Kosovo", 7662], ["Bosnien-Herz.", 6753], ["Serbien", 6484], ["Russland", 6459], ["Türkei", 6424], ["Albanien", 5485], ["China", 4300], ["Nordmazedonien", 4188], ["USA", 3918], ["Iran", 2676], ["Philippinen", 2474]], "2024": [["Indien", 8358], ["Türkei", 5686], ["Kosovo", 5122], ["Bosnien-Herz.", 4065], ["Albanien", 3939], ["China", 3712], ["Serbien", 3638], ["Nordmazedonien", 3279], ["USA", 3023], ["Russland", 2404], ["Iran", 2294], ["Ukraine", 2234]]}};
+(function(){
+ const cv=document.getElementById("cRace"); if(!cv) return;
+ let metric="asyl", year=2024, timer=null;
+ const lab=document.getElementById("rylab"), sl=document.getElementById("ryr"), pb=document.getElementById("rplay");
+ const rows=()=> (RACE[metric] && RACE[metric][String(year)]) ? RACE[metric][String(year)] : [];
+ const ch=new Chart(cv,{type:"bar",data:{labels:[],datasets:[{data:[],backgroundColor:[],borderRadius:4,maxBarThickness:30}]},
+   options:{indexAxis:"y",responsive:true,maintainAspectRatio:false,animation:{duration:650},
+     plugins:{legend:{display:false},datalabels:{anchor:"end",align:"end",color:C.text,font:{weight:700,size:11,family:"'Fira Code'"},formatter:v=>fmt(v)},
+       tooltip:{callbacks:{label:c=>fmt(c.raw)+(metric==="asyl"?" Erstanträge":" Erwerbstitel")}}},
+     scales:{x:{grid:{color:C.grid},ticks:{callback:v=>fmt(v)}},y:{grid:{display:false}}}}});
+ function render(){
+   const r=rows();
+   ch.data.labels=r.map(x=>x[0]);
+   ch.data.datasets[0].data=r.map(x=>x[1]);
+   ch.data.datasets[0].backgroundColor=r.map((x,i)=> i===0?"#15244B": i<3?"#2554A6":"#3B82F6");
+   ch.update(); lab.textContent=year; sl.value=year;
+ }
+ function stop(){ if(timer){clearInterval(timer);timer=null;pb.textContent="▶ Abspielen";} }
+ sl.addEventListener("input",e=>{ stop(); year=+e.target.value; render(); });
+ document.querySelectorAll(".rbtn").forEach(b=>b.addEventListener("click",()=>{ document.querySelectorAll(".rbtn").forEach(x=>x.classList.remove("active")); b.classList.add("active"); metric=b.dataset.metric; render(); }));
+ pb.addEventListener("click",()=>{ if(timer){stop();return;} pb.textContent="⏸ Pause"; if(year>=2024)year=2008; render(); timer=setInterval(()=>{ year++; if(year>2024){stop();return;} render(); },1100); });
+ render();
+})();
+
 </script>
 </body>
 </html>
