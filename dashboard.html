@@ -103,7 +103,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
     <div class="kicker">DATEN IM ÜBERBLICK</div>
     <h1>Migration &amp; <span style="color:var(--yellow)">Zusammenleben</span></h1>
     <p>Die zentralen Befunde zu Kriminalität, Integration, Sprache und Zusammenhalt — faktenbelegt, gegen Dramatisierung wie Verharmlosung.</p>
-    <div class="meta">Stand: Juni 2026 · Quellen: BKA/BMI (PKS 2024/25), BAMF, IAB, BA, SVR, RIAS, Mediendienst Integration · PKS = Hellfeld (Tatverdächtige ≠ Verurteilte)</div>
+    <div class="meta">Stand: Juni 2026 · Quellen: Bundeskriminalamt (BKA)/Bundesministerium des Innern (BMI) (Polizeiliche Kriminalstatistik (PKS) 2024/25), Bundesamt für Migration und Flüchtlinge (BAMF), Institut für Arbeitsmarkt- und Berufsforschung (IAB), Bundesagentur für Arbeit (BA), Sachverständigenrat für Integration und Migration (SVR), Recherche- und Informationsstelle Antisemitismus (RIAS), Mediendienst Integration · Polizeiliche Kriminalstatistik (PKS) = Hellfeld (Tatverdächtige ≠ Verurteilte)</div>
     <div class="principle"><strong>Leitprinzip:</strong> Probleme exakt benennen — ohne Gruppen pauschal zu verdächtigen. Nicht „Herkunft" erklärt Kriminalität, sondern Konstellationen: junger Mann + fehlende Perspektive + bestimmte Milieus.</div>
     <a class="navbtn" href="thesencheck.html">→ Thesen-Check im Detail (Thesen, je Grafik &amp; Faktencheck)</a>
     <a class="navbtn" href="weltkarten.html">→ Migration in Weltkarten</a>
@@ -120,48 +120,48 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
   <div class="grid">
 
     <div class="card wide">
-      <h3>Gewaltkriminalität: Pro-Kopf-Belastung (TVBZ) nach Nationalität, 2024</h3>
+      <h3>Gewaltkriminalität: Pro-Kopf-Belastung (Tatverdächtigenbelastungszahl, TVBZ) nach Nationalität, 2024</h3>
       <p class="take">Ansässige Tatverdächtige je 100.000 bei <strong>Gewaltdelikten</strong>. <strong>Alle</strong> ausgewiesenen Gruppen liegen über dem deutschen Wert (163) — von ~2,6× (Polen) bis ~11× (Marokko). Die Überrepräsentation ist real, variiert aber extrem nach Gruppe und wird stark von jung-männlicher Struktur und fehlender Bleibeperspektive getrieben — nicht von „Herkunft" an sich.</p>
-      <div class="chart-box tall"><canvas id="cTvbz" aria-label="Balkendiagramm Gewaltkriminalität TVBZ nach Nationalität"></canvas></div>
+      <div class="chart-box tall"><canvas id="cTvbz" aria-label="Balkendiagramm Gewaltkriminalität Tatverdächtigenbelastungszahl (TVBZ) nach Nationalität"></canvas></div>
       <div class="legend-note">
         <span><i class="dot" style="background:var(--primary)"></i> Deutsche (Referenz: 163)</span>
         <span><i class="dot" style="background:var(--warn)"></i> erhöht (&lt;1.000)</span>
         <span><i class="dot" style="background:var(--danger)"></i> stark erhöht (≥1.000)</span>
       </div>
-      <p class="src">Gewaltkriminalität (PKS-Schlüssel 892000), nur <strong>ansässige</strong> Tatverdächtige je 100.000; Bevölkerung Stichtag 31.12.2023 (Zensus 2022). Kleine Bezugsbevölkerungen → Einzelwerte unsicher. Quelle: <a href="https://dserver.bundestag.de/btd/21/001/2100145.pdf" target="_blank" rel="noopener">Bundestag-Drs. 21/145</a>.</p>
+      <p class="src">Gewaltkriminalität (Polizeiliche Kriminalstatistik (PKS)-Schlüssel 892000), nur <strong>ansässige</strong> Tatverdächtige je 100.000; Bevölkerung Stichtag 31.12.2023 (Zensus 2022). Kleine Bezugsbevölkerungen → Einzelwerte unsicher. Quelle: <a href="https://dserver.bundestag.de/btd/21/001/2100145.pdf" target="_blank" rel="noopener">Bundestag-Drs. 21/145</a>.</p>
     </div>
 
     <div class="card wide">
-      <h3>Gesamtkriminalität (alle Delikte): TVBZ nach Nationalität, 2024</h3>
-      <p class="take">Zum Vergleich die Belastung über <strong>alle Straftaten</strong>. Auch hier liegen alle ausgewiesenen Gruppen über dem deutschen Wert (1.879) — Spannweite ~1,6× (Italien) bis ~5,6× (Syrien). <strong>Achtung:</strong> „Straftaten insgesamt" enthält <strong>ausländerrechtliche Verstöße</strong> (illegale Einreise/Aufenthalt — nur von Ausländern begehbar), die v. a. Asylherkunftsgruppen (Syrien/Afghanistan/Irak) nach oben verzerren.</p>
-      <div class="chart-box tall"><canvas id="cTvbzGes" aria-label="Balkendiagramm Gesamtkriminalität TVBZ nach Nationalität"></canvas></div>
+      <h3>Gesamtkriminalität (alle Delikte): Tatverdächtigenbelastungszahl (TVBZ) nach Nationalität, 2024</h3>
+      <p class="take">Zum Vergleich die Belastung über <strong>alle Straftaten</strong>. Auch hier liegen alle ausgewiesenen Gruppen über dem deutschen Wert (1.879) — Spannweite ~1,6× (Italien) bis ~5,6× (Syrien). <strong>Achtung:</strong> „Straftaten insgesamt" enthält <strong>ausländerrechtliche Verstöße</strong> (illegale Einreise/Aufenthalt — nur von Ausländern begehbar), die vor allem Asylherkunftsgruppen (Syrien/Afghanistan/Irak) nach oben verzerren.</p>
+      <div class="chart-box tall"><canvas id="cTvbzGes" aria-label="Balkendiagramm Gesamtkriminalität Tatverdächtigenbelastungszahl (TVBZ) nach Nationalität"></canvas></div>
       <div class="legend-note">
         <span><i class="dot" style="background:var(--primary)"></i> Deutsche (Referenz: 1.879)</span>
         <span><i class="dot" style="background:var(--warn)"></i> erhöht (&lt;5.000)</span>
         <span><i class="dot" style="background:var(--danger)"></i> stark erhöht (≥5.000)</span>
       </div>
-      <p class="src">Straftaten insgesamt (inkl. ausländerrechtlicher Verstöße), TVBZ je 100.000, 2024; Bevölkerung 31.12.2023. Kleine Bezugsbevölkerungen → Einzelwerte unsicher; <strong>bereinigt</strong> (ohne Ausländerrecht) lägen die Asylherkunftsgruppen deutlich niedriger. Quelle: <a href="https://www.bundestag.de/presse/hib/kurzmeldungen-1098772" target="_blank" rel="noopener">Bundestag/hib (PKS 2024)</a>.</p>
+      <p class="src">Straftaten insgesamt (inklusive ausländerrechtlicher Verstöße), Tatverdächtigenbelastungszahl (TVBZ) je 100.000, 2024; Bevölkerung 31.12.2023. Kleine Bezugsbevölkerungen → Einzelwerte unsicher; <strong>bereinigt</strong> (ohne Ausländerrecht) lägen die Asylherkunftsgruppen deutlich niedriger. Quelle: <a href="https://www.bundestag.de/presse/hib/kurzmeldungen-1098772" target="_blank" rel="noopener">Bundestag/hib (Polizeiliche Kriminalstatistik (PKS) 2024)</a>.</p>
     </div>
 
     <div class="card">
       <h3>Der Framing-Trick beim „Ausländeranteil"</h3>
       <p class="take">Roh- vs. bereinigte Zahl — und warum der Direktvergleich mit „15 % Bevölkerung" unsauber ist.</p>
       <div class="chart-box"><canvas id="cAnteil" aria-label="Balkendiagramm Ausländeranteil roh, bereinigt, Bevölkerung"></canvas></div>
-      <p class="src">~27 % der „nichtdeutschen Tatverdächtigen" wohnen gar nicht hier (Touristen/Durchreisende) und fehlen im 15 %-Nenner. Quellen: <a href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2024/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html" target="_blank" rel="noopener">BKA PKS</a>, <a href="https://mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/begehen-auslaender-oefter-straftaten-als-deutsche/" target="_blank" rel="noopener">Mediendienst Integration</a>.</p>
+      <p class="src">~27 % der „nichtdeutschen Tatverdächtigen" wohnen gar nicht hier (Touristen/Durchreisende) und fehlen im 15 %-Nenner. Quellen: <a href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2024/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html" target="_blank" rel="noopener">Bundeskriminalamt (BKA) Polizeiliche Kriminalstatistik (PKS)</a>, <a href="https://mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/begehen-auslaender-oefter-straftaten-als-deutsche/" target="_blank" rel="noopener">Mediendienst Integration</a>.</p>
     </div>
 
     <div class="card">
       <h3>Anzeigeverhalten verzerrt nach oben</h3>
       <p class="take">Wenn Opfer deutsch und Täter nichtdeutsch ist, wird fast 3× häufiger angezeigt — derselbe Vorfall, mehr Statistik.</p>
       <div class="chart-box"><canvas id="cAnzeige" aria-label="Balkendiagramm Anzeigequote bei Jugendgewalt"></canvas></div>
-      <p class="src">Anteil angezeigter Jugend-Gewaltdelikte. Quelle: <a href="https://mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/begehen-auslaender-oefter-straftaten-als-deutsche/" target="_blank" rel="noopener">Mediendienst Integration / KFN</a>.</p>
+      <p class="src">Anteil angezeigter Jugend-Gewaltdelikte. Quelle: <a href="https://mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/begehen-auslaender-oefter-straftaten-als-deutsche/" target="_blank" rel="noopener">Mediendienst Integration / Kriminologisches Forschungsinstitut Niedersachsen (KFN)</a>.</p>
     </div>
 
     <div class="card wide">
       <h3>Gewaltkriminalität: realer Anstieg 2019–2024, leichter Rückgang 2025</h3>
       <p class="take">Beides ist wahr — gegen die „alles wird schlimmer"-Erzählung <em>und</em> gegen das „langfristig sinkt alles"-Framing. Index 2019 = 100.</p>
       <div class="chart-box"><canvas id="cGewalt" aria-label="Liniendiagramm Gewaltkriminalität Index seit 2019"></canvas></div>
-      <p class="src">2024: 217.277 Fälle (Höchststand, +20 % ggü. 2019); 2025: −2,3 %. Quellen: <a href="https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2025/04/pks-2024.html" target="_blank" rel="noopener">BMI PKS 2024</a>, <a href="https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2026/04/pks2025-pm.html" target="_blank" rel="noopener">PKS 2025</a>. Werte 2019/23/25 aus %-Angaben berechnet.</p>
+      <p class="src">2024: 217.277 Fälle (Höchststand, +20 % ggü. 2019); 2025: −2,3 %. Quellen: <a href="https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2025/04/pks-2024.html" target="_blank" rel="noopener">Bundesministerium des Innern (BMI) Polizeiliche Kriminalstatistik (PKS) 2024</a>, <a href="https://www.bmi.bund.de/SharedDocs/pressemitteilungen/DE/2026/04/pks2025-pm.html" target="_blank" rel="noopener">Polizeiliche Kriminalstatistik (PKS) 2025</a>. Werte 2019/23/25 aus %-Angaben berechnet.</p>
     </div>
 
     <div class="card wide">
@@ -170,12 +170,12 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
       <div class="chart-box tall"><canvas id="cDelikt" aria-label="Gestapeltes Balkendiagramm Tatverdächtige deutsch nichtdeutsch in/außerhalb Deutschlands nach Deliktfeld"></canvas></div>
       <div class="legend-note">
         <span><i class="dot" style="background:var(--secondary)"></i> deutsch</span>
-        <span><i class="dot" style="background:var(--warn)"></i> nichtdt., in DE wohnhaft</span>
-        <span><i class="dot" style="background:var(--ref)"></i> nichtdt., nicht in DE / unbekannt</span>
+        <span><i class="dot" style="background:var(--warn)"></i> nichtdeutsche, in Deutschland wohnhaft</span>
+        <span><i class="dot" style="background:var(--ref)"></i> nichtdeutsche, nicht in Deutschland / unbekannt</span>
         <span><i class="dot" style="background:repeating-linear-gradient(45deg,#64748b,#64748b 3px,#ffffff 3px,#ffffff 5px)"></i> Nicht-Wohnbev. (grob geschätzt ~1 %)</span>
         <span>gestrichelt = 50 %-Marke</span>
       </div>
-      <p class="src">* Vergewaltigung/sex. Nötigung/schwerer Übergriff. „Gesamt" ohne ausländerrechtliche Verstöße. Segment „nicht in DE" nur beziffert, wo belastbar (gesamt: 27 % der ausl. TV = 19,5 % Ausland + 7,5 % unbek., 2023; Taschendiebstahl: ~35 %, 2015/16); bei Gewalt-/Sexualdelikten gering. In der Bevölkerungszeile ist die Nicht-Wohnbev. <strong>grob geschätzt ~1 %</strong> (Größenordnung 0,6–1 Mio.: ~234 Tsd. Tagestouristen aus 85,3 Mio. Auslands-Übernachtungen ÷ 365, ~232 Tsd. Einpendler, ~0,2–0,5 Mio. ohne Aufenthaltsstatus; Wohnbev.-Split 85,2/14,8 unverändert). Quellen: <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Migration-Integration/Tabellen/auslaendische-bevoelkerung-staatsangehoerigkeit-jahre.html" target="_blank" rel="noopener">Destatis (Bevölkerung 14,8 %)</a>, <a href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/02/PD25_053_45412.html" target="_blank" rel="noopener">Destatis Tourismus 2024</a>, <a href="https://www.bbsr.bund.de/BBSR/DE/forschung/fachbeitraege/raumentwicklung/europaeisch-international/einpendelnde-aus-nachbarlaendern/01-start.html" target="_blank" rel="noopener">BBSR Einpendler</a>, <a href="https://www.bpb.de/themen/migration-integration/regionalprofile/deutschland/341113/irregulaere-migration-in-deutschland/" target="_blank" rel="noopener">bpb irreguläre Migration</a>, <a href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2024/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html" target="_blank" rel="noopener">BKA PKS</a>, <a href="https://mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/begehen-auslaender-oefter-straftaten-als-deutsche/" target="_blank" rel="noopener">Mediendienst (Wohnsitz)</a>, <a href="https://mediendienst-integration.de/fileadmin/Dateien/Gutachten_Walburg_Kriminalitaet_Migration.pdf" target="_blank" rel="noopener">Walburg</a>.</p>
+      <p class="src">* Vergewaltigung/sex. Nötigung/schwerer Übergriff. „Gesamt" ohne ausländerrechtliche Verstöße. Segment „nicht in Deutschland" nur beziffert, wo belastbar (gesamt: 27 % der ausländische Tatverdächtige (TV) = 19,5 % Ausland + 7,5 % unbek., 2023; Taschendiebstahl: ~35 %, 2015/16); bei Gewalt-/Sexualdelikten gering. In der Bevölkerungszeile ist die Nicht-Wohnbev. <strong>grob geschätzt ~1 %</strong> (Größenordnung 0,6–1 Millionen: ~234 Tausend Tagestouristen aus 85,3 Millionen Auslands-Übernachtungen ÷ 365, ~232 Tausend Einpendler, ~0,2–0,5 Millionen ohne Aufenthaltsstatus; Wohnbev.-Split 85,2/14,8 unverändert). Quellen: <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Migration-Integration/Tabellen/auslaendische-bevoelkerung-staatsangehoerigkeit-jahre.html" target="_blank" rel="noopener">Destatis (Bevölkerung 14,8 %)</a>, <a href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2025/02/PD25_053_45412.html" target="_blank" rel="noopener">Destatis Tourismus 2024</a>, <a href="https://www.bbsr.bund.de/BBSR/DE/forschung/fachbeitraege/raumentwicklung/europaeisch-international/einpendelnde-aus-nachbarlaendern/01-start.html" target="_blank" rel="noopener">Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR) Einpendler</a>, <a href="https://www.bpb.de/themen/migration-integration/regionalprofile/deutschland/341113/irregulaere-migration-in-deutschland/" target="_blank" rel="noopener">Bundeszentrale für politische Bildung (bpb) irreguläre Migration</a>, <a href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2024/PKSTabellen/BundTVNationalitaet/bundTVNationalitaet.html" target="_blank" rel="noopener">Bundeskriminalamt (BKA) Polizeiliche Kriminalstatistik (PKS)</a>, <a href="https://mediendienst-integration.de/kriminalitaet/auslaenderkriminalitaet/begehen-auslaender-oefter-straftaten-als-deutsche/" target="_blank" rel="noopener">Mediendienst (Wohnsitz)</a>, <a href="https://mediendienst-integration.de/fileadmin/Dateien/Gutachten_Walburg_Kriminalitaet_Migration.pdf" target="_blank" rel="noopener">Walburg</a>.</p>
     </div>
 
     <div class="warnbox">
@@ -185,7 +185,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
         <li><strong>Alters-/Geschlechtsstruktur:</strong> Zugewanderte sind viel häufiger junge Männer — die tatgeneigteste Gruppe in <em>jeder</em> Bevölkerung. Das treibt den Anteil, nicht die „Herkunft".</li>
         <li><strong>Nicht-Wohnbevölkerung:</strong> ~27 % der nichtdeutschen Tatverdächtigen (gesamt) wohnen gar nicht hier (graues Segment) — sie zählen im Zähler, fehlen aber im 14,8 %-Nenner.</li>
         <li><strong>Anzeigeverhalten:</strong> Taten mit nichtdeutschen Verdächtigen werden fast 3× häufiger angezeigt (Abschnitt oben) — mehr Statistik bei gleicher Tat.</li>
-        <li><strong>Pro Kopf (TVBZ) ist die Überrepräsentation real — aber gruppenspezifisch:</strong> bei Gewaltdelikten von ~2,6× (Polen) bis ~11× (Marokko) gegenüber Deutschen (erste Grafik). Sie wird stark von Alter, Geschlecht und Bleibeperspektive getrieben, nicht von „Herkunft" an sich. „Die Ausländer" als einheitlicher Block existiert statistisch nicht — die Spannweite zwischen Gruppen ist enorm.</li>
+        <li><strong>Pro Kopf (Tatverdächtigenbelastungszahl, TVBZ) ist die Überrepräsentation real — aber gruppenspezifisch:</strong> bei Gewaltdelikten von ~2,6× (Polen) bis ~11× (Marokko) gegenüber Deutschen (erste Grafik). Sie wird stark von Alter, Geschlecht und Bleibeperspektive getrieben, nicht von „Herkunft" an sich. „Die Ausländer" als einheitlicher Block existiert statistisch nicht — die Spannweite zwischen Gruppen ist enorm.</li>
       </ul>
       Kurz: Der Balken zeigt die <em>Zusammensetzung</em> der Tatverdächtigen — nicht, wie kriminell eine Gruppe pro Kopf ist.
     </div>
@@ -196,7 +196,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 <!-- ============ MILIEU-TREIBER ============ -->
 <section>
   <h2 class="section-title">2 · Milieu-Treiber: Was Kriminalität wirklich erklärt</h2>
-  <p class="section-sub">Nicht „Herkunft", sondern Konstellationen. Strukturbefunde (Datenbasis v. a. 2015/16, gelten fort). Hauptquelle: Walburg-Gutachten / Mediendienst Integration.</p>
+  <p class="section-sub">Nicht „Herkunft", sondern Konstellationen. Strukturbefunde (Datenbasis vor allem 2015/16, gelten fort). Hauptquelle: Walburg-Gutachten / Mediendienst Integration.</p>
   <div class="grid">
 
     <div class="card">
@@ -210,14 +210,14 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
       <h3>Bleibeperspektive (2): das Maghreb-Diebstahls-Milieu</h3>
       <p class="take">Kleine Gruppen ohne Perspektive und ohne Arbeitserlaubnis konzentrieren sich auf Beschaffungsdelikte: Nordafrikaner stellten <strong>39 %</strong> der ausländischen Taschendiebstahl-Tatverdächtigen.</p>
       <div class="chart-box"><canvas id="cMaghreb" aria-label="Balkendiagramm Nordafrikaner Anteil an Tatverdächtigen"></canvas></div>
-      <p class="src">Nordafrikaner (Algerien/Marokko/Tunesien): Anteil an ausländischen TV gesamt vs. beim Taschendiebstahl (2015/16). Quelle: <a href="https://mediendienst-integration.de/fileadmin/Dateien/Gutachten_Walburg_Kriminalitaet_Migration.pdf" target="_blank" rel="noopener">Walburg-Gutachten (Mediendienst)</a>.</p>
+      <p class="src">Nordafrikaner (Algerien/Marokko/Tunesien): Anteil an ausländischen Tatverdächtige (TV) gesamt vs. beim Taschendiebstahl (2015/16). Quelle: <a href="https://mediendienst-integration.de/fileadmin/Dateien/Gutachten_Walburg_Kriminalitaet_Migration.pdf" target="_blank" rel="noopener">Walburg-Gutachten (Mediendienst)</a>.</p>
     </div>
 
     <div class="card">
       <h3>Alter: junge Altersgruppen tragen die Last</h3>
       <p class="take">Der stärkste, herkunfts<strong>unabhängige</strong> Treiber: 14- bis 20-Jährige sind um ein Vielfaches stärker belastet als der Schnitt — bei Deutschen wie Zugewanderten.</p>
       <div class="chart-box"><canvas id="cAlter" aria-label="Balkendiagramm Tatverdächtigenbelastung nach Alter"></canvas></div>
-      <p class="src">TVBZ nach Altersgruppe (NRW 2023/24, illustrativ). Quelle: <a href="https://polizei.nrw/sites/default/files/2025-10/PKS-Jahrbuch2024.pdf" target="_blank" rel="noopener">PKS-Jahrbuch NRW 2024</a>.</p>
+      <p class="src">Tatverdächtigenbelastungszahl (TVBZ) nach Altersgruppe (Nordrhein-Westfalen (NRW) 2023/24, illustrativ). Quelle: <a href="https://polizei.nrw/sites/default/files/2025-10/PKS-Jahrbuch2024.pdf" target="_blank" rel="noopener">Polizeiliche Kriminalstatistik (PKS)-Jahrbuch Nordrhein-Westfalen (NRW) 2024</a>.</p>
     </div>
 
     <div class="card wide">
@@ -229,7 +229,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
         <li><strong>Wohnsituation:</strong> Konflikte in beengten Sammelunterkünften erhöhen Gewaltdelikte.</li>
         <li><strong>Politische Konsequenz:</strong> Fast alle Treiber sind <strong>veränderbar</strong> — Bleibeperspektive klären, Arbeit erlauben, Sprache/Bildung, dezentral unterbringen; bei Chancenlosen konsequent zurückführen.</li>
       </ul>
-      <p class="src">Quellen: <a href="https://mediendienst-integration.de/fileadmin/Dateien/Gutachten_Walburg_Kriminalitaet_Migration.pdf" target="_blank" rel="noopener">Walburg/Mediendienst</a>, <a href="https://www.bpb.de/themen/innere-sicherheit/dossier-innere-sicherheit/301624/migration-und-kriminalitaet/" target="_blank" rel="noopener">bpb</a>, KFN, BKA-Lagebilder.</p>
+      <p class="src">Quellen: <a href="https://mediendienst-integration.de/fileadmin/Dateien/Gutachten_Walburg_Kriminalitaet_Migration.pdf" target="_blank" rel="noopener">Walburg/Mediendienst</a>, <a href="https://www.bpb.de/themen/innere-sicherheit/dossier-innere-sicherheit/301624/migration-und-kriminalitaet/" target="_blank" rel="noopener">Bundeszentrale für politische Bildung (bpb)</a>, Kriminologisches Forschungsinstitut Niedersachsen (KFN), Bundeskriminalamt (BKA)-Lagebilder.</p>
     </div>
 
   </div>
@@ -245,7 +245,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
       <h3>Erwerbstätigkeit: Männer top, Frauen abgehängt</h3>
       <p class="take">Geflüchtete Männer übertreffen nach Jahren den dt. Männerschnitt — Frauen bleiben bei 33 %. Das ist die größte reale Lücke.</p>
       <div class="chart-box"><canvas id="cArbeit" aria-label="Balkendiagramm Erwerbstätigenquoten"></canvas></div>
-      <p class="src">Kohorte 2015, Stand 2025; Frauen/Männer nach 8+ Jahren. Quelle: <a href="https://iab.de/presseinfo/10-jahre-fluchtmigration-beschaeftigungsquote-von-gefluechteten-naehert-sich-dem-durchschnitt-in-deutschland-an/" target="_blank" rel="noopener">IAB</a>.</p>
+      <p class="src">Kohorte 2015, Stand 2025; Frauen/Männer nach 8+ Jahren. Quelle: <a href="https://iab.de/presseinfo/10-jahre-fluchtmigration-beschaeftigungsquote-von-gefluechteten-naehert-sich-dem-durchschnitt-in-deutschland-an/" target="_blank" rel="noopener">Institut für Arbeitsmarkt- und Berufsforschung (IAB)</a>.</p>
     </div>
 
     <div class="card">
@@ -257,14 +257,14 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 
     <div class="card wide">
       <h3>Asyl-Erstanträge 2015–2025: vom Rekord zum tiefsten Stand seit 2020</h3>
-      <p class="take">Nach dem Höchststand 2015/16, dem Einbruch bis 2020, dem Wiederanstieg 2022/23 nun <strong>−50,7 % in 2025</strong> (113.236) — überwiegend Syrien-Moratorium + EU-Faktoren, nicht allein dt. Steuerung.</p>
+      <p class="take">Nach dem Höchststand 2015/16, dem Einbruch bis 2020, dem Wiederanstieg 2022/23 nun <strong>−50,7 % in 2025</strong> (113.236) — überwiegend Syrien-Moratorium + Europäische Union (EU)-Faktoren, nicht allein dt. Steuerung.</p>
       <div class="chart-box tall"><canvas id="cAsyl" aria-label="Balkendiagramm Asyl-Erstanträge 2015 bis 2025"></canvas></div>
       <div class="legend-note">
         <span><i class="dot" style="background:var(--warn)"></i> Höchststand 2015/16</span>
         <span><i class="dot" style="background:var(--secondary)"></i> übrige Jahre</span>
         <span><i class="dot" style="background:var(--good)"></i> tiefster Stand seit 2020 (2025)</span>
       </div>
-      <p class="src">Erstanträge je Jahr. Quellen: <a href="https://www.bamf.de/SharedDocs/Meldungen/DE/2026/260112-asylzahlen-dezember-und-gesamtjahr-2025.html" target="_blank" rel="noopener">BAMF Gesamtjahr 2025</a>, <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Statistik/BundesamtinZahlen/bundesamt-in-zahlen-2024.pdf" target="_blank" rel="noopener">Bundesamt in Zahlen</a>; 2023: 329.120, 2024: 229.751, 2025: 113.236.</p>
+      <p class="src">Erstanträge je Jahr. Quellen: <a href="https://www.bamf.de/SharedDocs/Meldungen/DE/2026/260112-asylzahlen-dezember-und-gesamtjahr-2025.html" target="_blank" rel="noopener">Bundesamt für Migration und Flüchtlinge (BAMF) Gesamtjahr 2025</a>, <a href="https://www.bamf.de/SharedDocs/Anlagen/DE/Statistik/BundesamtinZahlen/bundesamt-in-zahlen-2024.pdf" target="_blank" rel="noopener">Bundesamt in Zahlen</a>; 2023: 329.120, 2024: 229.751, 2025: 113.236.</p>
     </div>
 
   </div>
@@ -278,13 +278,13 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 
     <div class="card wide">
       <h3>Sprachförderbedarf bei Einschulung — Städte weit vorn</h3>
-      <p class="take">Großstädte und Stadtstaaten liegen deutlich über den Flächenländern. Spannweite: von ~20 % (Bayern) bis ~59 % (Bremerhaven); <strong>Stuttgart-Stadt 34 %</strong> (intensiver Bedarf; Landesschnitt BW 28 %).</p>
+      <p class="take">Großstädte und Stadtstaaten liegen deutlich über den Flächenländern. Spannweite: von ~20 % (Bayern) bis ~59 % (Bremerhaven); <strong>Stuttgart-Stadt 34 %</strong> (intensiver Bedarf; Landesschnitt Baden-Württemberg (BW) 28 %).</p>
       <div class="chart-box"><canvas id="cSprachLand" aria-label="Balkendiagramm Sprachförderbedarf bei Einschulung nach Region"></canvas></div>
       <div class="legend-note">
         <span><i class="dot" style="background:var(--warn)"></i> Städte / Stadtstaaten</span>
         <span><i class="dot" style="background:var(--secondary)"></i> Flächenländer</span>
       </div>
-      <p class="src">Anteil Schulanfänger mit Sprachförderbedarf (jüngste Erhebungen; Definitionen je Land unterschiedlich — „intensiver" vs. „gesamter" Bedarf). Quellen: <a href="https://www.senatspressestelle.bremen.de/pressemitteilungen/frueher-start-fuer-bessere-chancen-sprachfoerderung-wird-pflicht-485457" target="_blank" rel="noopener">Senat Bremen</a>, <a href="https://www.news4teachers.de/2026/03/ohne-deutsch-ins-klassenzimmer-sprachdefizite-belasten-vor-allem-brennpunkt-schulen-massiv/" target="_blank" rel="noopener">Hamburg/Länder</a>, <a href="https://sozialministerium.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/positive-entwicklungen-bei-einschulungsuntersuchung-1" target="_blank" rel="noopener">Sozialministerium BW</a>.</p>
+      <p class="src">Anteil Schulanfänger mit Sprachförderbedarf (jüngste Erhebungen; Definitionen je Land unterschiedlich — „intensiver" vs. „gesamter" Bedarf). Quellen: <a href="https://www.senatspressestelle.bremen.de/pressemitteilungen/frueher-start-fuer-bessere-chancen-sprachfoerderung-wird-pflicht-485457" target="_blank" rel="noopener">Senat Bremen</a>, <a href="https://www.news4teachers.de/2026/03/ohne-deutsch-ins-klassenzimmer-sprachdefizite-belasten-vor-allem-brennpunkt-schulen-massiv/" target="_blank" rel="noopener">Hamburg/Länder</a>, <a href="https://sozialministerium.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/positive-entwicklungen-bei-einschulungsuntersuchung-1" target="_blank" rel="noopener">Sozialministerium Baden-Württemberg (BW)</a>.</p>
     </div>
 
     <div class="card">
@@ -305,12 +305,12 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
       <h3>Fokus Stuttgart &amp; Feuerbach</h3>
       <p class="take">Auch im wohlhabenden Stuttgart steigt der Sprachförderbedarf — und der Bezirk Feuerbach liegt in der sozialen Zusammensetzung über dem Stadtschnitt.</p>
       <ul style="margin:6px 0 0;padding-left:18px;font-size:.92rem;color:#334155;line-height:1.75">
-        <li><strong>Stuttgart-Stadt:</strong> intensiver Sprachförderbedarf <strong>34 %</strong> (Landesschnitt BW 28 %), gestiegen von <strong>25,8 % (2010)</strong>; inkl. leichtem Bedarf rund <strong>47 %</strong> der Kinder.</li>
+        <li><strong>Stuttgart-Stadt:</strong> intensiver Sprachförderbedarf <strong>34 %</strong> (Landesschnitt Baden-Württemberg (BW) 28 %), gestiegen von <strong>25,8 % (2010)</strong>; inklusive leichtem Bedarf rund <strong>47 %</strong> der Kinder.</li>
         <li><strong>Baden-Württemberg:</strong> Bei Kindern mit nichtdeutscher Familiensprache in den ersten Lebensjahren haben <strong>80 %</strong> intensiven Förderbedarf (zweisprachig 50 %, nur Deutsch 13 %).</li>
         <li><strong>Region/bundesweit:</strong> Anteil Kinder mit nichtdeutscher Familiensprache stieg seit 2008 von <strong>16 % auf 21 %</strong>.</li>
         <li><strong>Feuerbach:</strong> Ausländeranteil <strong>24,1 %</strong> (Sozialdatenatlas 2016); Teilgebiet Feuerbach-Ost mit Transferbezugsquote <strong>22,7 %</strong>. Laut Stuttgarter Bildungsbericht (Bezirksprofil) liegt der Anteil der Kinder mit Migrationshintergrund/nichtdeutscher Familiensprache <strong>über dem Stadtdurchschnitt</strong> — ein exakter Familiensprache-Prozentwert ist dort nur grafisch ausgewiesen.</li>
       </ul>
-      <p class="src">Quellen: <a href="https://www.stuttgart.de/medien/ibs/Stuttgart_Bildungsbericht_akt_20180315.pdf" target="_blank" rel="noopener">Stuttgart Bildungsbericht (Bezirksprofil Feuerbach, S. 99)</a>, <a href="https://www.stuttgart.de/medien/ibs/sozdatatlas_stgt.pdf" target="_blank" rel="noopener">Sozialdatenatlas Stuttgart</a>, <a href="https://sozialministerium.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/positive-entwicklungen-bei-einschulungsuntersuchung-1" target="_blank" rel="noopener">Sozialministerium BW</a>.</p>
+      <p class="src">Quellen: <a href="https://www.stuttgart.de/medien/ibs/Stuttgart_Bildungsbericht_akt_20180315.pdf" target="_blank" rel="noopener">Stuttgart Bildungsbericht (Bezirksprofil Feuerbach, S. 99)</a>, <a href="https://www.stuttgart.de/medien/ibs/sozdatatlas_stgt.pdf" target="_blank" rel="noopener">Sozialdatenatlas Stuttgart</a>, <a href="https://sozialministerium.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/positive-entwicklungen-bei-einschulungsuntersuchung-1" target="_blank" rel="noopener">Sozialministerium Baden-Württemberg (BW)</a>.</p>
     </div>
 
     <div class="card wide">
@@ -321,7 +321,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
         <li><strong>Segregation:</strong> Nur <strong>17,1 %</strong> der Kinder mit deutschen Wurzeln besuchen in Großstädten Grundschulen mit über 50 % Zuwandereranteil — die Gruppen mischen sich kaum.</li>
         <li><strong>Wichtig:</strong> Nicht der Migrantenanteil an sich verschlechtert die Leistung, sondern die <strong>soziale Zusammensetzung</strong> der Schülerschaft (Forschung).</li>
       </ul>
-      <p class="src">Quellen: <a href="https://www.pedocs.de/volltexte/2023/27104/pdf/Weishaupt_2023_Kinder_mit_nichtdeutscher.pdf" target="_blank" rel="noopener">Mikrozensus / Weishaupt</a>, <a href="https://www.svr-migration.de/wp-content/uploads/2025/01/SVR-Fakten-zu-ungleichen-Bildungschancen-2025.pdf" target="_blank" rel="noopener">SVR „Ungleiche Bildungschancen" 2025</a>, <a href="https://www.bpb.de/themen/bildung/dossier-bildung/211879/ethnische-bildungsungleichheiten/" target="_blank" rel="noopener">bpb</a>.</p>
+      <p class="src">Quellen: <a href="https://www.pedocs.de/volltexte/2023/27104/pdf/Weishaupt_2023_Kinder_mit_nichtdeutscher.pdf" target="_blank" rel="noopener">Mikrozensus / Weishaupt</a>, <a href="https://www.svr-migration.de/wp-content/uploads/2025/01/SVR-Fakten-zu-ungleichen-Bildungschancen-2025.pdf" target="_blank" rel="noopener">Sachverständigenrat für Integration und Migration (SVR) „Ungleiche Bildungschancen" 2025</a>, <a href="https://www.bpb.de/themen/bildung/dossier-bildung/211879/ethnische-bildungsungleichheiten/" target="_blank" rel="noopener">Bundeszentrale für politische Bildung (bpb)</a>.</p>
     </div>
 
   </div>
@@ -336,7 +336,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
       <h3>Antisemitische Straftaten: rechts bleibt quantitativ führend</h3>
       <p class="take">Gegen das einseitige „importiert"-Framing: über die Hälfte ist rechtsmotiviert. Israelbezogener Antisemitismus wächst zusätzlich stark.</p>
       <div class="chart-box"><canvas id="cAnti" aria-label="Ringdiagramm Zuordnung antisemitischer Straftaten"></canvas></div>
-      <p class="src">Zuordnung nach Motiv, 2024 (~6.240 Taten, Höchststand). Quellen: <a href="https://www.bka.de/DE/UnsereAufgaben/Deliktsbereiche/PMK/PMKZahlen2024/PMKZahlen2024.html" target="_blank" rel="noopener">BKA PMK 2024</a>, <a href="https://www.zentralratderjuden.de/presseerklaerungen/politisch-motivierte-kriminalitaet-2024/" target="_blank" rel="noopener">Zentralrat der Juden</a>; <a href="https://report-antisemitism.de/documents/04-06-25_RIAS_Bund_Jahresbericht_2024.pdf" target="_blank" rel="noopener">RIAS</a> zählt Vorfälle abweichend.</p>
+      <p class="src">Zuordnung nach Motiv, 2024 (~6.240 Taten, Höchststand). Quellen: <a href="https://www.bka.de/DE/UnsereAufgaben/Deliktsbereiche/PMK/PMKZahlen2024/PMKZahlen2024.html" target="_blank" rel="noopener">Bundeskriminalamt (BKA) Politisch motivierte Kriminalität (PMK) 2024</a>, <a href="https://www.zentralratderjuden.de/presseerklaerungen/politisch-motivierte-kriminalitaet-2024/" target="_blank" rel="noopener">Zentralrat der Juden</a>; <a href="https://report-antisemitism.de/documents/04-06-25_RIAS_Bund_Jahresbericht_2024.pdf" target="_blank" rel="noopener">Recherche- und Informationsstelle Antisemitismus (RIAS)</a> zählt Vorfälle abweichend.</p>
     </div>
     <div class="card">
       <h3>Was die Daten <em>nicht</em> hergeben</h3>
@@ -358,12 +358,12 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
     <table class="dirty">
       <thead><tr><th>Seite</th><th>Behauptung</th><th>Warum unsauber</th><th>Sauber</th></tr></thead>
       <tbody>
-        <tr><td class="side"><span class="tag r">rechts</span></td><td>„41,8 % der Tatverdächtigen sind Ausländer."</td><td>Unbereinigt — inkl. Delikten, die nur Ausländer begehen <em>können</em>.</td><td>Bereinigt ~35,5 %.</td></tr>
-        <tr><td class="side"><span class="tag r">rechts</span></td><td>„35,5 % vs. 15 % Bevölkerung = 3× krimineller."</td><td>~27 % der TV wohnen nicht hier; Altersstruktur ignoriert.</td><td>Kein zulässiger Direktvergleich.</td></tr>
+        <tr><td class="side"><span class="tag r">rechts</span></td><td>„41,8 % der Tatverdächtigen sind Ausländer."</td><td>Unbereinigt — inklusive Delikten, die nur Ausländer begehen <em>können</em>.</td><td>Bereinigt ~35,5 %.</td></tr>
+        <tr><td class="side"><span class="tag r">rechts</span></td><td>„35,5 % vs. 15 % Bevölkerung = 3× krimineller."</td><td>~27 % der Tatverdächtige (TV) wohnen nicht hier; Altersstruktur ignoriert.</td><td>Kein zulässiger Direktvergleich.</td></tr>
         <tr><td class="side"><span class="tag r">rechts</span></td><td>Pfeiffers „92 %" (Niedersachsen).</td><td>Region/Zeit-spezifisch; gleiche Studie betont Anzeige-Bias + Familiennachzug.</td><td>Kein genereller Beleg.</td></tr>
-        <tr><td class="side"><span class="tag r">rechts</span></td><td>Tatverdächtige = „Kriminelle".</td><td>Verdacht ≠ Verurteilung.</td><td>PKS misst nur Verdacht.</td></tr>
+        <tr><td class="side"><span class="tag r">rechts</span></td><td>Tatverdächtige = „Kriminelle".</td><td>Verdacht ≠ Verurteilung.</td><td>Polizeiliche Kriminalstatistik (PKS) misst nur Verdacht.</td></tr>
         <tr><td class="side"><span class="tag l">links</span></td><td>„Migration senkt die Kriminalität."</td><td>Langfrist-Korrelation überdeckt Gewaltanstieg 2021–24.</td><td>Korrelation ≠ Kausalität.</td></tr>
-        <tr><td class="side"><span class="tag l">links</span></td><td>„Nur 8,8 % der TV sind Zuwanderer."</td><td>Enge Kategorie; blendet TVBZ &amp; Gewaltdelikte aus.</td><td>Beide Zahlen zeigen.</td></tr>
+        <tr><td class="side"><span class="tag l">links</span></td><td>„Nur 8,8 % der Tatverdächtige (TV) sind Zuwanderer."</td><td>Enge Kategorie; blendet Tatverdächtigenbelastungszahl (TVBZ) &amp; Gewaltdelikte aus.</td><td>Beide Zahlen zeigen.</td></tr>
         <tr><td class="side"><span class="tag l">links</span></td><td>„Alles nur Demografie/Soziales."</td><td>Restunterschied bleibt bei gleichem Alter/Geschlecht/Bildung.</td><td>„Erheblich", nicht „vollständig".</td></tr>
         <tr><td class="side"><span class="tag l">links</span></td><td>Anzeige-Bias als Total-Entwarnung.</td><td>Relativiert, eliminiert die Differenz aber nicht.</td><td>Beides benennen.</td></tr>
       </tbody>
@@ -375,7 +375,7 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 <!-- ============ THESEN-CHECK ============ -->
 <section>
   <h2 class="section-title">7 · Thesen-Check: Wie rechts mit den Zahlen argumentiert</h2>
-  <p class="section-sub">Den Fakt anerkennen, die Kausal-Erzählung prüfen. Links die These (❌), rechts der Faktencheck (✓). Ausgangsfakt: ~35,5 % nichtdt. Tatverdächtige (bereinigt) bei ~14,8 % Bevölkerung — real, aber erklärungsbedürftig.</p>
+  <p class="section-sub">Den Fakt anerkennen, die Kausal-Erzählung prüfen. Links die These (❌), rechts der Faktencheck (✓). Ausgangsfakt: ~35,5 % nichtdeutsche Tatverdächtige (bereinigt) bei ~14,8 % Bevölkerung — real, aber erklärungsbedürftig.</p>
   <div class="thesen">
 
     <div class="these-row">
@@ -385,11 +385,11 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 
     <div class="these-row">
       <div class="these"><span class="lbl">❌ These 2</span><p>„Bestimmte Ethnien/Kulturen sind gewaltaffin."</p></div>
-      <div class="check"><span class="lbl">✓ Faktencheck</span><p class="kern">Kern: einzelne Gruppen real hoch belastet.</p><p>Aber der Bleibeperspektive-Test entlarvt die Ethnie-These: <strong>Georgien (orthodox-christlich)</strong> ist Spitze beim Diebstahl. Nicht Ethnie, sondern <strong>Status + Perspektivlosigkeit</strong>. 2. Generation/Schule in DE senkt die Auffälligkeit — bei „Ethnie" bliebe sie konstant.</p></div>
+      <div class="check"><span class="lbl">✓ Faktencheck</span><p class="kern">Kern: einzelne Gruppen real hoch belastet.</p><p>Aber der Bleibeperspektive-Test entlarvt die Ethnie-These: <strong>Georgien (orthodox-christlich)</strong> ist Spitze beim Diebstahl. Nicht Ethnie, sondern <strong>Status + Perspektivlosigkeit</strong>. 2. Generation/Schule in Deutschland senkt die Auffälligkeit — bei „Ethnie" bliebe sie konstant.</p></div>
     </div>
 
     <div class="these-row">
-      <div class="these"><span class="lbl">❌ These 3</span><p>„Der Islam ist die Ursache" — Beleg: KFN-Studie (Religiosität ↔ Gewalt bei muslimischen Jungen).</p></div>
+      <div class="these"><span class="lbl">❌ These 3</span><p>„Der Islam ist die Ursache" — Beleg: Kriminologisches Forschungsinstitut Niedersachsen (KFN)-Studie (Religiosität ↔ Gewalt bei muslimischen Jungen).</p></div>
       <div class="check"><span class="lbl">✓ Faktencheck</span><p class="kern">Kern: statistische Korrelation existiert.</p><p>Die Studie findet <strong>keinen direkten Effekt</strong> — er ist vollständig <strong>vermittelt über gewaltlegitimierende Männlichkeitsnormen</strong> + geringe Integration. Pfeiffer: „Der Islam ist nicht verantwortlich, sondern wie er vermittelt wird." Christ-Gegentest: Georgien hoch. <strong>&lt;5 %</strong> der Zuwanderer werden überhaupt tatverdächtig.</p></div>
     </div>
 
@@ -405,21 +405,21 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 
     <div class="these-row">
       <div class="these"><span class="lbl">❌ These 6</span><p>„Die wahren Zahlen werden vertuscht/geschönt."</p></div>
-      <div class="check"><span class="lbl">✓ Faktencheck</span><p>Gegenteil: PKS weist Nationalität, TVBZ, die Kategorie „Zuwanderer" und ein eigenes Lagebild „Kriminalität im Kontext von Zuwanderung" aus — <strong>öffentlich und granular</strong>. Gerade damit lässt sich die Verkürzung widerlegen.</p></div>
+      <div class="check"><span class="lbl">✓ Faktencheck</span><p>Gegenteil: Polizeiliche Kriminalstatistik (PKS) weist Nationalität, Tatverdächtigenbelastungszahl (TVBZ), die Kategorie „Zuwanderer" und ein eigenes Lagebild „Kriminalität im Kontext von Zuwanderung" aus — <strong>öffentlich und granular</strong>. Gerade damit lässt sich die Verkürzung widerlegen.</p></div>
     </div>
 
     <div class="these-row">
       <div class="these"><span class="lbl">❌ These 7</span><p>„Messerstechereien sind vor allem von Muslimen."</p></div>
-      <div class="check"><span class="lbl">✓ Faktencheck</span><p>Die <strong>PKS erfasst keine Religion</strong> — die Aussage ist amtlich nicht belegbar (Nationalität ≠ Religion). Nichtdt. Anteil je Land <strong>35–55 %</strong> (oft nicht „Mehrheit"); ~90 % männlich; umfasst auch häusliche Gewalt. Im Dunkelfeld kaum Unterschied beim Messer-Einsatz.</p></div>
+      <div class="check"><span class="lbl">✓ Faktencheck</span><p>Die <strong>Polizeiliche Kriminalstatistik (PKS) erfasst keine Religion</strong> — die Aussage ist amtlich nicht belegbar (Nationalität ≠ Religion). Nichtdt. Anteil je Land <strong>35–55 %</strong> (oft nicht „Mehrheit"); ~90 % männlich; umfasst auch häusliche Gewalt. Im Dunkelfeld kaum Unterschied beim Messer-Einsatz.</p></div>
     </div>
 
     <div class="these-row">
       <div class="these"><span class="lbl">❌ These 8</span><p>„Syrer/Afghanen/Iraner sind besonders kriminell."</p></div>
-      <div class="check"><span class="lbl">✓ Faktencheck</span><p class="kern">Kern: Syrien/Afghanistan/Irak real hohe TVBZ (~5× gesamt).</p><p>Aber „gesamt" durch <strong>ausländerrechtliche Verstöße überzeichnet</strong>; Treiber sind Jung-Männer-Struktur, Unterkünfte, Trauma, Normen. <strong>Iran passt nicht in die Reihe</strong> (keine vergleichbar hohe TVBZ, andere Diaspora).</p></div>
+      <div class="check"><span class="lbl">✓ Faktencheck</span><p class="kern">Kern: Syrien/Afghanistan/Irak real hohe Tatverdächtigenbelastungszahl (TVBZ) (~5× gesamt).</p><p>Aber „gesamt" durch <strong>ausländerrechtliche Verstöße überzeichnet</strong>; Treiber sind Jung-Männer-Struktur, Unterkünfte, Trauma, Normen. <strong>Iran passt nicht in die Reihe</strong> (keine vergleichbar hohe Tatverdächtigenbelastungszahl (TVBZ), andere Diaspora).</p></div>
     </div>
 
     <div class="these-row">
-      <div class="these"><span class="lbl">❌ These 9</span><p>„Die 2./3. Generation integriert sich nie." (bzw. „wird automatisch besser")</p></div>
+      <div class="these"><span class="lbl">❌ These 9</span><p>„Die 2./3. Generation integriert sich nie." (beziehungsweise „wird automatisch besser")</p></div>
       <div class="check"><span class="lbl">✓ Faktencheck</span><p>Beides falsch: Delinquenz <strong>sinkt nicht automatisch</strong>, neu Zugewanderte sind eher weniger auffällig. Ursache ist nicht Migration, sondern <strong>3× höhere Armut (37,4 % vs. 13,8 %)</strong> + Diskriminierung. Hebel: Bildung, Chancen, Antidiskriminierung.</p></div>
     </div>
 
@@ -464,7 +464,7 @@ const baseScales=(unit='')=>({
   y:{grid:{display:false}}
 });
 
-/* 1. TVBZ nach Nationalität (horizontal, sortiert) */
+/* 1. Tatverdächtigenbelastungszahl (TVBZ) nach Nationalität (horizontal, sortiert) */
 const tv=[['Deutsche',163],['Polen',427],['Ukraine',443],['Türkei',538],['Rumänien',618],['Serbien',814],['Bulgarien',884],['Irak',1606],['Afghanistan',1722],['Syrien',1740],['Marokko',1885]];
 new Chart(cTvbz,{type:'bar',data:{labels:tv.map(d=>d[0]),
   datasets:[{data:tv.map(d=>d[1]),
@@ -472,10 +472,10 @@ new Chart(cTvbz,{type:'bar',data:{labels:tv.map(d=>d[0]),
     borderRadius:5,barThickness:20}]},
   options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
     plugins:{datalabels:{anchor:'end',align:'end',color:C.text,font:{weight:600,family:"'Fira Code'"},formatter:v=>fmt(v)},
-      tooltip:{callbacks:{label:c=>'TVBZ Gewalt: '+fmt(c.raw)+' / 100.000'}}},
+      tooltip:{callbacks:{label:c=>'Tatverdächtigenbelastungszahl (TVBZ) Gewalt: '+fmt(c.raw)+' / 100.000'}}},
     scales:{x:{grid:{color:C.grid},suggestedMax:2050,ticks:{callback:v=>fmt(v)}},y:{grid:{display:false}}}}});
 
-/* 1b. Gesamtkriminalität TVBZ nach Nationalität (alle Straftaten) */
+/* 1b. Gesamtkriminalität Tatverdächtigenbelastungszahl (TVBZ) nach Nationalität (alle Straftaten) */
 const tvg=[['Deutsche',1879],['Italien',3036],['Polen',4388],['Ukraine',4787],['Türkei',4899],['Rumänien',6738],['Bulgarien',7073],['Serbien',7341],['Irak',9413],['Afghanistan',10503],['Syrien',10587]];
 new Chart(cTvbzGes,{type:'bar',data:{labels:tvg.map(d=>d[0]),
   datasets:[{data:tvg.map(d=>d[1]),
@@ -483,12 +483,12 @@ new Chart(cTvbzGes,{type:'bar',data:{labels:tvg.map(d=>d[0]),
     borderRadius:5,barThickness:20}]},
   options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
     plugins:{datalabels:{anchor:'end',align:'end',color:C.text,font:{weight:600,size:10,family:"'Fira Code'"},formatter:v=>fmt(v)},
-      tooltip:{callbacks:{label:c=>'TVBZ gesamt: '+fmt(c.raw)+' / 100.000'}}},
+      tooltip:{callbacks:{label:c=>'Tatverdächtigenbelastungszahl (TVBZ) gesamt: '+fmt(c.raw)+' / 100.000'}}},
     scales:{x:{grid:{color:C.grid},suggestedMax:11500,ticks:{callback:v=>fmt(v)}},y:{grid:{display:false}}}}});
 
 /* 2. Ausländeranteil Framing */
 new Chart(cAnteil,{type:'bar',data:{
-  labels:['Bevölkerung\n(gemeldet)','TV bereinigt\n(ohne Ausl.-Recht)','TV roh\n(mit Ausl.-Recht)'],
+  labels:['Bevölkerung\n(gemeldet)','Tatverdächtige (TV) bereinigt\n(ohne Ausländerrecht)','Tatverdächtige (TV) roh\n(mit Ausländerrecht)'],
   datasets:[{data:[15,35.5,41.8],backgroundColor:[C.good,C.secondary,C.warn],borderRadius:5,barThickness:46}]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,family:"'Fira Code'"},formatter:v=>v+' %'},
@@ -497,7 +497,7 @@ new Chart(cAnteil,{type:'bar',data:{
 
 /* 3. Anzeigeverhalten */
 new Chart(cAnzeige,{type:'bar',data:{
-  labels:['Opfer dt. /\nTäter dt.','Opfer dt. /\nTäter nichtdt.'],
+  labels:['Opfer dt. /\nTäter dt.','Opfer dt. /\nTäter nichtdeutsche'],
   datasets:[{data:[7.9,22.4],backgroundColor:[C.ref,C.warn],borderRadius:5,barThickness:70}]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,family:"'Fira Code'"},formatter:v=>v+' %'},
@@ -516,7 +516,7 @@ new Chart(cGewalt,{type:'line',data:{
 
 /* 5. Erwerbstätigkeit */
 new Chart(cArbeit,{type:'bar',data:{
-  labels:['Gefl. Männer\n(8+ J.)','Dt. Männer\n(Schnitt)','Gefl. gesamt\n(Kohorte 2015)','Gefl. Frauen\n(8+ J.)'],
+  labels:['Gefl. Männer\n(8+ J.)','Deutsche Männer\n(Schnitt)','Gefl. gesamt\n(Kohorte 2015)','Gefl. Frauen\n(8+ J.)'],
   datasets:[{data:[86,81,64,33],backgroundColor:[C.good,C.ref,C.secondary,C.danger],borderRadius:5,barThickness:46}]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,family:"'Fira Code'"},formatter:v=>v+' %'},
@@ -534,7 +534,7 @@ new Chart(cBuergergeld,{type:'doughnut',data:{
 
 /* 7. Antisemitismus */
 new Chart(cAnti,{type:'doughnut',data:{
-  labels:['Rechtsmotiviert','PMK-sonstige','Übrige (u. a. ausl./relig. Ideologie, links)'],
+  labels:['Rechtsmotiviert','Politisch motivierte Kriminalität (PMK)-sonstige','Übrige (unter anderem ausländische/relig. Ideologie, links)'],
   datasets:[{data:[51.3,33.9,14.8],backgroundColor:[C.danger,'#94A3B8',C.secondary],borderWidth:2,borderColor:'#fff'}]},
   options:{responsive:true,maintainAspectRatio:false,cutout:'58%',
     plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:12,font:{size:10.5}}},
@@ -566,7 +566,7 @@ new Chart(cSprachLand,{type:'bar',data:{labels:sl.map(d=>d[0]),
 new Chart(cBerlinTrend,{type:'bar',data:{labels:['2019','2022'],
   datasets:[
     {label:'Sprachdefizite (alle Kinder)',data:[30.1,32.9],backgroundColor:C.secondary,borderRadius:4,maxBarThickness:38},
-    {label:'kaum/fehlerhaft Deutsch (nichtdt. Herkunft)',data:[34.8,41.4],backgroundColor:C.warn,borderRadius:4,maxBarThickness:38}
+    {label:'kaum/fehlerhaft Deutsch (nichtdeutsche Herkunft)',data:[34.8,41.4],backgroundColor:C.warn,borderRadius:4,maxBarThickness:38}
   ]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:11,font:{size:10}}},
@@ -582,13 +582,13 @@ new Chart(cBerlinBezirk,{type:'bar',data:{labels:['Neukölln\n(gesamt)','Neuköl
       tooltip:{callbacks:{label:c=>c.raw+' % mit Sprachförderbedarf'}}},
     scales:{y:{grid:{color:C.grid},suggestedMax:45,ticks:{callback:v=>v+' %'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
 
-/* 12. Tatverdächtige deutsch / nichtdt.-in-DE / nichtdt.-nicht-in-DE nach Deliktfeld (gestapelt) + Bevölkerungszeile */
+/* 12. Tatverdächtige deutsch / nichtdeutsche-in-DE / nichtdeutsche-nicht-in-DE nach Deliktfeld (gestapelt) + Bevölkerungszeile */
 new Chart(cDelikt,{type:'bar',
-  data:{labels:['Bevölkerung\n(inkl. Nicht-Wohnbev.)','Taschendiebstahl','Gewaltkriminalität','Sexualdelikte*','Häusliche Gewalt','Straftaten gesamt'],
+  data:{labels:['Bevölkerung\n(inklusive Nicht-Wohnbev.)','Taschendiebstahl','Gewaltkriminalität','Sexualdelikte*','Häusliche Gewalt','Straftaten gesamt'],
     datasets:[
       {label:'deutsch',data:[84.4,25,57,61,64,65],backgroundColor:C.secondary,stack:'s',borderRadius:3},
-      {label:'nichtdt., in DE',data:[14.6,49,43,39,36,25.5],backgroundColor:C.warn,stack:'s',borderRadius:3},
-      {label:'nichtdt., nicht in DE/unbek.',data:[1,26,0,0,0,9.5],backgroundColor:C.ref,stack:'s',borderRadius:3}
+      {label:'nichtdeutsche, in DE',data:[14.6,49,43,39,36,25.5],backgroundColor:C.warn,stack:'s',borderRadius:3},
+      {label:'nichtdeutsche, nicht in Deutschland/unbek.',data:[1,26,0,0,0,9.5],backgroundColor:C.ref,stack:'s',borderRadius:3}
     ]},
   options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
     plugins:{legend:{display:false},
@@ -597,7 +597,7 @@ new Chart(cDelikt,{type:'bar',
         if(c.dataIndex===0){
           if(c.datasetIndex===0)return 'deutsch: 85,2 % der Wohnbevölkerung';
           if(c.datasetIndex===1)return 'nichtdeutsch: 14,8 % der Wohnbevölkerung';
-          return 'Nicht-Wohnbev.: grob geschätzt ~1 % (≈0,6–1 Mio.) der Anwesenden';
+          return 'Nicht-Wohnbev.: grob geschätzt ~1 % (≈0,6–1 Millionen) der Anwesenden';
         }
         return c.dataset.label+': '+c.raw+' %';
       }}}},
@@ -628,19 +628,19 @@ new Chart(cBleibe,{type:'bar',data:{labels:['Anteil an\nAsylsuchenden','Anteil a
     scales:{y:{grid:{color:C.grid},suggestedMax:36,ticks:{callback:v=>v+' %'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
 
 /* 14. Maghreb-Milieu: Taschendiebstahl */
-new Chart(cMaghreb,{type:'bar',data:{labels:['an allen\nausl. TV','beim\nTaschendiebstahl'],
+new Chart(cMaghreb,{type:'bar',data:{labels:['an allen\nausl. Tatverdächtige (TV)','beim\nTaschendiebstahl'],
   datasets:[{data:[5.8,39],backgroundColor:[C.ref,C.warn],borderRadius:5,maxBarThickness:80}]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,family:"'Fira Code'"},formatter:v=>v+' %'},
       tooltip:{callbacks:{label:c=>c.raw+' % der ausländischen Tatverdächtigen'}}},
     scales:{y:{grid:{color:C.grid},suggestedMax:45,ticks:{callback:v=>v+' %'}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
 
-/* 15. Alter: TVBZ nach Altersgruppe (NRW, illustrativ) */
+/* 15. Alter: Tatverdächtigenbelastungszahl (TVBZ) nach Altersgruppe (Nordrhein-Westfalen (NRW), illustrativ) */
 new Chart(cAlter,{type:'bar',data:{labels:['alle Altersgr.\n(Ø ≈)','Jugendliche\n(14–17)','Heranwachsende\n(18–20)'],
   datasets:[{data:[2000,5844,6960],backgroundColor:[C.ref,C.warn,C.danger],borderRadius:5,maxBarThickness:70}]},
   options:{responsive:true,maintainAspectRatio:false,
     plugins:{datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,size:10,family:"'Fira Code'"},formatter:v=>fmt(v)},
-      tooltip:{callbacks:{label:c=>'TVBZ '+fmt(c.raw)+' / 100.000'}}},
+      tooltip:{callbacks:{label:c=>'Tatverdächtigenbelastungszahl (TVBZ) '+fmt(c.raw)+' / 100.000'}}},
     scales:{y:{grid:{color:C.grid},suggestedMax:7800,ticks:{callback:v=>fmt(v)}},x:{grid:{display:false},ticks:{font:{size:10}}}}}});
 
 /* Bar-Race: Herkunftsländer im Zeitverlauf */

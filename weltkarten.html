@@ -52,8 +52,8 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
 <header><div class="wrap">
   <div class="kicker">7 WELTKARTEN</div>
   <h1>Migration in <span style="color:var(--yellow)">Weltkarten</span></h1>
-  <p>Sieben Choropleth-Karten zu Herkunft und Steuerung der Migration nach Deutschland — jede Karte mit <strong>belegten Zahlen</strong> (Tooltip beim Überfahren). Die verwendete Metrik ist pro Karte angegeben (z. B. Schutzquote in %, Geduldete absolut, Abschiebungen 2024).</p>
-  <div class="meta">Stand Juni 2026 · Quellen: BAMF, Destatis, bpb, BMI, Mediendienst Integration, SVR · Kartengrundlage: world-atlas (Natural Earth)</div>
+  <p>Sieben Choropleth-Karten zu Herkunft und Steuerung der Migration nach Deutschland — jede Karte mit <strong>belegten Zahlen</strong> (Tooltip beim Überfahren). Die verwendete Metrik ist pro Karte angegeben (zum Beispiel Schutzquote in %, Geduldete absolut, Abschiebungen 2024).</p>
+  <div class="meta">Stand Juni 2026 · Quellen: Bundesamt für Migration und Flüchtlinge (BAMF), Destatis, Bundeszentrale für politische Bildung (bpb), Bundesministerium des Innern (BMI), Mediendienst Integration, Sachverständigenrat für Integration und Migration (SVR) · Kartengrundlage: world-atlas (Natural Earth)</div>
   <a class="navbtn" href="dashboard.html">← Daten-Dashboard</a>
   <a class="navbtn" href="thesencheck.html">→ Thesen-Check</a>
 </div><div class="bar"><i class="y"></i><i class="b"></i></div></header>
@@ -76,9 +76,9 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
   </div>
 
   <div class="card"><h2>2 · Asylsuchende — Erstanträge nach Herkunftsland</h2>
-    <p class="sub"><strong>Asyl-Erstanträge (absolut, Eurostat-gerundet).</strong> Jahr per Regler/Animation. Gut sichtbar: der <strong>Peak 2015/16</strong> (Syrien ~266.000 in 2016) und der Rückgang danach bzw. 2024.</p>
+    <p class="sub"><strong>Asyl-Erstanträge (absolut, Eurostat-gerundet).</strong> Jahr per Regler/Animation. Gut sichtbar: der <strong>Peak 2015/16</strong> (Syrien ~266.000 in 2016) und der Rückgang danach beziehungsweise 2024.</p>
     <div class="map-box"><canvas id="m2"></canvas></div>
-    <div class="legend"><span><i class="sw" style="background:#1e3a8a"></i> ≥ 50.000</span><span><i class="sw" style="background:#1E40AF"></i> 10–50 Tsd.</span><span><i class="sw" style="background:#3b82f6"></i> 3–10 Tsd.</span><span><i class="sw" style="background:#60a5fa"></i> 0,5–3 Tsd.</span><span><i class="sw" style="background:#bfdbfe"></i> &lt; 500</span></div>
+    <div class="legend"><span><i class="sw" style="background:#1e3a8a"></i> ≥ 50.000</span><span><i class="sw" style="background:#1E40AF"></i> 10–50 Tausend</span><span><i class="sw" style="background:#3b82f6"></i> 3–10 Tausend</span><span><i class="sw" style="background:#60a5fa"></i> 0,5–3 Tausend</span><span><i class="sw" style="background:#bfdbfe"></i> &lt; 500</span></div>
     <p class="src">First-time asylum applicants by citizenship, 2008–2024. Quelle: <a href="https://ec.europa.eu/eurostat/databrowser/view/migr_asyappctza/default/table?lang=en" target="_blank" rel="noopener">Eurostat (migr_asyappctza)</a>.</p>
   </div>
 
@@ -90,28 +90,28 @@ footer .wm .u{display:block;width:48px;height:6px;background:var(--yellow);margi
   </div>
 
   <div class="card"><h2>4 · Abgelehnte Asylsuchende — Ablehnungsquote</h2>
-    <p class="sub"><strong>Ablehnungsquote 1. Instanz in % (negativ ÷ alle Entscheidungen).</strong> Jahr per Regler/Animation; nur Länder mit ≥ 50 Entscheidungen. Spiegelbild zu Karte 3: hohe Ablehnung v. a. bei sicheren Herkunfts-/Westbalkanstaaten.</p>
+    <p class="sub"><strong>Ablehnungsquote 1. Instanz in % (negativ ÷ alle Entscheidungen).</strong> Jahr per Regler/Animation; nur Länder mit ≥ 50 Entscheidungen. Spiegelbild zu Karte 3: hohe Ablehnung vor allem bei sicheren Herkunfts-/Westbalkanstaaten.</p>
     <div class="map-box"><canvas id="m4"></canvas></div>
     <div class="legend"><span><i class="sw" style="background:#7f1d1d"></i> ≥ 85 %</span><span><i class="sw" style="background:#b91c1c"></i> 60–85 %</span><span><i class="sw" style="background:#f59e0b"></i> 30–60 %</span><span><i class="sw" style="background:#fde68a"></i> &lt; 30 %</span></div>
     <p class="src">First-instance rejection rate by citizenship, 2008–2024. Quelle: <a href="https://ec.europa.eu/eurostat/databrowser/view/migr_asydcfsta/default/table?lang=en" target="_blank" rel="noopener">Eurostat (migr_asydcfsta)</a>.</p>
   </div>
 
   <div class="card"><h2>5 · Länder mit Rücknahme-/Migrationsabkommen — Zeitleiste</h2>
-    <p class="sub"><strong>Kumulativ: jedes Land erscheint ab seinem Vertragsjahr.</strong> Beim Abspielen sieht man, wie ab 2008 die EU-Westbalkan-Abkommen bestehen und ab 2022 die neuen Migrationsabkommen dazukommen (Indien 2022, Georgien 2023, Kenia/Usbekistan 2024). Status + Jahr im Tooltip.</p>
+    <p class="sub"><strong>Kumulativ: jedes Land erscheint ab seinem Vertragsjahr.</strong> Beim Abspielen sieht man, wie ab 2008 die Europäische Union (EU)-Westbalkan-Abkommen bestehen und ab 2022 die neuen Migrationsabkommen dazukommen (Indien 2022, Georgien 2023, Kenia/Usbekistan 2024). Status + Jahr im Tooltip.</p>
     <div class="map-box"><canvas id="m5"></canvas></div>
-    <div class="legend"><span><i class="sw" style="background:#0F766E"></i> Migrationsabk. (neu, verbindlich)</span><span><i class="sw" style="background:#14b8a6"></i> EU-Rücknahmeabk. Westbalkan</span><span><i class="sw" style="background:#5eead4"></i> Partnerschaft/Absichtserklärung</span></div>
-    <p class="src">Quelle: <a href="https://mediendienst-integration.de/ein-und-auswanderung/einwanderung-nach-deutschland/welche-migrationsabkommen-gibt-es/" target="_blank" rel="noopener">Mediendienst (Migrationsabkommen)</a>, <a href="https://www.bpb.de/themen/migration-integration/kurzdossiers/556182/deutsche-und-europaeische-migrationsabkommen/" target="_blank" rel="noopener">bpb</a>.</p>
+    <div class="legend"><span><i class="sw" style="background:#0F766E"></i> Migrationsabk. (neu, verbindlich)</span><span><i class="sw" style="background:#14b8a6"></i> Europäische Union (EU)-Rücknahmeabk. Westbalkan</span><span><i class="sw" style="background:#5eead4"></i> Partnerschaft/Absichtserklärung</span></div>
+    <p class="src">Quelle: <a href="https://mediendienst-integration.de/ein-und-auswanderung/einwanderung-nach-deutschland/welche-migrationsabkommen-gibt-es/" target="_blank" rel="noopener">Mediendienst (Migrationsabkommen)</a>, <a href="https://www.bpb.de/themen/migration-integration/kurzdossiers/556182/deutsche-und-europaeische-migrationsabkommen/" target="_blank" rel="noopener">Bundeszentrale für politische Bildung (bpb)</a>.</p>
   </div>
 
   <div class="card"><h2>6 · Geduldete — Herkunftsländer (nur 2024)</h2>
-    <p class="sub"><strong>Personen mit Duldung, Stichtag 31.12.2024 (AZR).</strong> <em>Diese Reihe gibt es amtlich nicht je Land über die Jahre — daher nur 2024 hinterlegt; für andere Jahre erscheint „keine Länderdaten" (nichts erfunden).</em> Top: Irak 18.536 · Türkei 13.600 · Nigeria 9.802 · Russland 9.654 · Afghanistan 9.294 … Gesamt 178.512.</p>
+    <p class="sub"><strong>Personen mit Duldung, Stichtag 31.12.2024 (Ausländerzentralregister, AZR).</strong> <em>Diese Reihe gibt es amtlich nicht je Land über die Jahre — daher nur 2024 hinterlegt; für andere Jahre erscheint „keine Länderdaten" (nichts erfunden).</em> Top: Irak 18.536 · Türkei 13.600 · Nigeria 9.802 · Russland 9.654 · Afghanistan 9.294 … Gesamt 178.512.</p>
     <div class="map-box"><canvas id="m6"></canvas></div>
     <div class="legend"><span><i class="sw" style="background:#7c2d12"></i> ≥ 10.000</span><span><i class="sw" style="background:#b45309"></i> 6.000–10.000</span><span><i class="sw" style="background:#d97706"></i> 4.000–6.000</span><span><i class="sw" style="background:#fcd34d"></i> &lt; 4.000</span></div>
-    <p class="src">Personen mit Duldung nach Herkunft. Quelle: <a href="https://dserver.bundestag.de/btd/21/001/2100192.pdf" target="_blank" rel="noopener">BT-Drs. 21/192 (AZR, 31.12.2024)</a>, <a href="https://mediendienst-integration.de/fluechtlinge/duldung/wie-viele-personen-haben-eine-duldung/" target="_blank" rel="noopener">Mediendienst</a>.</p>
+    <p class="src">Personen mit Duldung nach Herkunft. Quelle: <a href="https://dserver.bundestag.de/btd/21/001/2100192.pdf" target="_blank" rel="noopener">Bundestags-Drucksache (BT-Drs.) 21/192 (Ausländerzentralregister (AZR), 31.12.2024)</a>, <a href="https://mediendienst-integration.de/fluechtlinge/duldung/wie-viele-personen-haben-eine-duldung/" target="_blank" rel="noopener">Mediendienst</a>.</p>
   </div>
 
   <div class="card"><h2>7 · Rückführungen nach Staatsangehörigkeit</h2>
-    <p class="sub"><strong>Rückführungen nach einer Ausreiseanordnung (absolut, Eurostat).</strong> Jahr per Regler/Animation. Hinweis: Eurostat zählt etwas breiter als die nationale „Abschiebungen"-Statistik (inkl. Rückkehr nach Anordnung); der Verlauf zeigt v. a. die Westbalkan-Welle 2015/16 und das Niveau danach.</p>
+    <p class="sub"><strong>Rückführungen nach einer Ausreiseanordnung (absolut, Eurostat).</strong> Jahr per Regler/Animation. Hinweis: Eurostat zählt etwas breiter als die nationale „Abschiebungen"-Statistik (inklusive Rückkehr nach Anordnung); der Verlauf zeigt vor allem die Westbalkan-Welle 2015/16 und das Niveau danach.</p>
     <div class="map-box"><canvas id="m7"></canvas></div>
     <div class="legend"><span><i class="sw" style="background:#0f766e"></i> ≥ 5.000</span><span><i class="sw" style="background:#14b8a6"></i> 2.000–5.000</span><span><i class="sw" style="background:#5eead4"></i> 800–2.000</span><span><i class="sw" style="background:#99f6e4"></i> 200–800</span><span><i class="sw" style="background:#ccfbf1"></i> &lt; 200</span></div>
     <p class="src">Third-country nationals returned following an order to leave, by citizenship, 2008–2024. Quelle: <a href="https://ec.europa.eu/eurostat/databrowser/view/migr_eirtn/default/table?lang=en" target="_blank" rel="noopener">Eurostat (migr_eirtn)</a>.</p>
