@@ -327,6 +327,8 @@ footer .wrap a{color:var(--yellow)}
         <li>Nichtdt. Anteil je Land <span class="stat">35–55 %</span> (oft keine Mehrheit).</li>
         <li><span class="stat">~90 %</span> männlich; umfasst auch häusliche Gewalt.</li>
         <li>Dunkelfeld: kaum Unterschied beim Messer-Einsatz.</li>
+        <li>Die einzigen Daten, die Religion <em>messen</em> (KFN-Schülerbefragungen), zeigen <span class="stat">keinen</span> Zusammenhang Religiosität↔Gewalt — auch eine christl. Gruppe (Ex-UdSSR) ist erhöht (<span class="stat">5,7 %</span>). Treiber: Männlichkeitsnormen/Milieu.</li>
+        <li>Medien-Verzerrung: <span class="stat">94,6 %</span> der TV-Berichte mit Herkunftsnennung betreffen Ausländer — real nur <span class="stat">34,4 %</span> (BKA 2024).</li>
       </ul>
     </div>
   </div>
@@ -335,7 +337,12 @@ footer .wrap a{color:var(--yellow)}
     <div class="chart-box"><canvas id="c7"></canvas></div>
     <p class="src">Nationalität ≠ Religion. Streuung je Land; gestrichelt = 50 %. Quellen: <a href="https://mediendienst-integration.de/artikel/messerkriminalitaet-welche-rolle-spielt-die-nationalitaet.html" target="_blank" rel="noopener">Mediendienst Integration</a>, <a href="https://www.bmi.bund.de/SharedDocs/faqs/DE/themen/sicherheit/pks/pks.html" target="_blank" rel="noopener">BMI: PKS erfasst keine Religion</a>.</p>
   </div>
-  <div class="fazit"><strong>Fazit:</strong> Messergewalt ist nichtdt. überrepräsentiert (real), aber „vor allem Muslime" ist <strong>nicht belegbar</strong> — und verwechselt Nationalität mit Religion.</div>
+  <div class="chart-wrap">
+    <p class="chart-title">Wahrnehmung vs. Realität: Anteil ausländischer Tatverdächtiger</p>
+    <div class="chart-box"><canvas id="c68"></canvas></div>
+    <p class="src">In Medienberichten, die überhaupt eine Herkunft nennen, sind fast nur Ausländer Thema (TV 94,6 %, Print 90,8 %) — real liegt der Anteil bei Gewaltkriminalität bei 34,4 % (BKA 2024). Tatverdächtige aus muslimisch geprägten Ländern sind so &gt;4-fach überrepräsentiert; Polizei-Pressestellen verstärken den Effekt. Quellen: <a href="https://mediendienst-integration.de/fileadmin/Expertise_Hestermann_Herkunft_von_Tatverdaechtigen_in_den_Medien.pdf" target="_blank" rel="noopener">Hestermann/Mediendienst 2025</a>, <a href="https://criminologia.de/2010/06/kfn-legt-zweiten-forschungsbericht-zur-jugengewalt-integration-religiositaet-vo/" target="_blank" rel="noopener">KFN: Religiosität &amp; Gewalt</a>.</p>
+  </div>
+  <div class="fazit"><strong>Fazit:</strong> Messergewalt ist nichtdt. überrepräsentiert (real), aber „vor allem Muslime" ist <strong>dreifach unbelegt</strong>: amtlich nicht erfasst, von der Forschung <strong>nicht</strong> als religiös verursacht ausgewiesen (Treiber: Milieu/Männlichkeit) und durch Medien/Pressestellen <strong>3–4-fach</strong> aufgebläht.</div>
 </section>
 
 <section class="chapter" id="a7">
@@ -1550,6 +1557,11 @@ const d7=[['Baden-Württ.',55],['Hessen',50],['Sachsen',49.2],['NRW',47.4],['Nie
 new Chart(c7,{type:'bar',data:{labels:d7.map(d=>d[0]),datasets:[{data:d7.map(d=>d[1]),backgroundColor:d7.map(d=>d[1]>=50?C.danger:C.warn),borderRadius:5,barThickness:20}]},
   options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{datalabels:{anchor:'end',align:'end',color:C.text,font:{weight:600,size:10,family:"'Fira Code'"},formatter:v=>v+' %'},tooltip:{callbacks:{label:c=>c.raw+' % nichtdeutsch'}}},scales:{x:{grid:{color:C.grid},max:70,ticks:{callback:v=>v+' %'}},y:{grid:{display:false}}}},
   plugins:[{id:'h50',afterDraw:(ch)=>{const a=ch.chartArea,x=ch.scales.x,p=x.getPixelForValue(50),ctx=ch.ctx;ctx.save();ctx.strokeStyle='#0f1f4d';ctx.setLineDash([5,4]);ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(p,a.top);ctx.lineTo(p,a.bottom);ctx.stroke();ctx.restore();}}]});
+
+/* C68 — Wahrnehmung vs. Realität: Anteil ausländ./nichtdt. Tatverdächtiger (Hestermann 2025 vs. BKA 2024) */
+const d68=[['TV-Berichte',94.6],['Print-Berichte',90.8],['BKA real (Gewalt)',34.4]];
+new Chart(c68,{type:'bar',data:{labels:d68.map(d=>d[0]),datasets:[{data:d68.map(d=>d[1]),backgroundColor:d68.map(d=>d[0].startsWith('BKA')?C.secondary:C.danger),borderRadius:5,maxBarThickness:96}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},datalabels:{anchor:'end',align:'top',color:C.text,font:{weight:700,size:13,family:"'Fira Code'"},formatter:v=>v+' %'},tooltip:{callbacks:{label:c=>c.raw+' % ausländisch/nichtdeutsch'}}},scales:{y:{grid:{color:C.grid},suggestedMax:100,ticks:{callback:v=>v+' %'}},x:{grid:{display:false}}}}});
 
 /* C8 — Kriegsherkunft TVBZ gesamt: mit vs. ohne ausländerrechtliche Verstöße */
 new Chart(c8,{type:'bar',data:{labels:['Deutsche','Irak','Afghanistan','Syrien'],datasets:[
